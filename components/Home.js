@@ -1,5 +1,6 @@
 import TwitterTimeLine from './Twitter';
 import SideBar from './SideBar';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 function HomeScreen({route, navigation}) {
   const avatar = require("../assets/avatar.jpg");
@@ -31,7 +32,7 @@ function HomeScreen({route, navigation}) {
           <p>
             This is a landscape photo taken in my favorite city, Kyoto. More photos can be found in Gallery.
           </p>
-          <img src={kyoto} />
+          <LazyLoadImage src={kyoto} />
         </article>
         <div className="gap"> </div>
         {/*<SideBar />*/}

@@ -12,6 +12,7 @@ function navigate(path) {
     }
     $('#' + path).addClass("title-selected");
     navigation.navigate(path, {});
+    $('.totop').click();
   }
   );
 }

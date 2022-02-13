@@ -1109,6 +1109,51 @@ html {
     width: 70%;
 }
 
+.title-left {
+    display: inline-block;
+    font-size: 25px;
+    color: #eee;
+    user-select: none;
+}
+
+.title-center {
+    display: inline-block;
+    /*height: 10px;*/
+    font-size: 25px;
+    color: #eee;
+    line-height: 25px;
+    text-align: center;
+    user-select: none;
+}
+
+.wrapper .title-center {
+    position: relative;
+    margin-left: 10px;
+    padding: 19px 10px 19px;
+    width: 90px;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.4s ease-in-out;
+}
+
+#test {
+    visibility: hidden;
+}
+.wrapper .title-center:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.wrapper .title-center:active {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.guide-container {
+    display: inline-block;
+    position: fixed;
+    left: 23vw;
+    top: 0;
+}
+
 @media only screen and (max-width: 425px) {
     #title {
         display: none;

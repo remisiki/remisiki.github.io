@@ -1,6 +1,6 @@
 import style from '../assets/index.css';
 import { useNavigation } from '@react-navigation/native';
-
+import $ from 'jquery'
 
 function SideBar() {
 	const navigation = useNavigation();
@@ -18,6 +18,9 @@ function SideBar() {
 			              // itemId: 86,
 			              // otherParam: 'anything you want here',
 	            		});
+	            		// window.location.reload();
+	            		$('#twitter-tl').html();
+
 	          		}}>
 	            		<span lang="en">Home</span>
 	          		</a>

@@ -1,13 +1,12 @@
-import style from '../assets/index.css';
 import TwitterTimeLine from './Twitter';
 import SideBar from './SideBar';
-import avatar from '../assets/avatar.jpg';
 
 function HomeScreen({route, navigation}) {
+  const avatar = require("../assets/avatar.jpg");
   return (
     <body>
-      <div className="twitter-tl">
-        <TwitterTimeLine />
+      <div className="twitter-tl" id="twitter-tl" >
+        <TwitterTimeLine name="remisiki" />
       </div>
 
       <div id="content" className="wrapper doc">

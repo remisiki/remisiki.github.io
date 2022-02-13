@@ -49,6 +49,9 @@ hr {
 }
 
 article {
+    position: relative;
+    top: 70px;
+    bottom: 10px;
     max-width: 100vw;
     overflow-wrap: break-word;
     margin-left: 1em;
@@ -594,7 +597,7 @@ header nav a.download:active {
     top: 0;
     left: 0;
     width: 100%;
-    height: 90px;
+    height: 63px;
     z-index: 1;
 }
 

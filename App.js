@@ -49,44 +49,30 @@ function App() {
   return (
     // <NavigationContainer theme={DefaultTheme}>
     <NavigationContainer theme={MyTheme}>
-      <NavigationBlock />
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen 
-          name="Home" 
-          component={HomeScreen} 
-          options={{ 
-            // headerTitle: (props) => <NavigationBlock {...props} name="Remisiki's Home" />,
-            headerLeft: () => null,
-            title: null,
-          }} 
-        />
-        <Stack.Screen 
-          name="Info" 
-          component={InfoScreen} 
-          options={{ 
-            // headerTitle: (props) => <NavigationBlock {...props} name="Info" />,
-            headerLeft: () => null,
-            title: null,
-          }} 
-        />
-        <Stack.Screen 
-          name="Repos" 
-          component={ReposScreen} 
-          options={{ 
-            // headerTitle: (props) => <NavigationBlock {...props} name="Repos" />, 
-            headerLeft: () => null,
-            title: null,
-          }} 
-        />
-        <Stack.Screen 
-          name="Game" 
-          component={GameScreen} 
-          options={{ 
-            // headerTitle: (props) => <NavigationBlock {...props} name="Game" />, 
-            headerLeft: () => null,
-            title: null,
-          }} 
-        />
+      <section id="top">
+        <NavigationBlock />
+      </section>
+      <Stack.Navigator initialRouteName="Home" >
+        <Stack.Group
+          screenOptions={{ headerShown: false }}
+        >
+          <Stack.Screen 
+            name="Home" 
+            component={HomeScreen} 
+          />
+          <Stack.Screen 
+            name="Info" 
+            component={InfoScreen} 
+          />
+          <Stack.Screen 
+            name="Repos" 
+            component={ReposScreen}
+          />
+          <Stack.Screen 
+            name="Game" 
+            component={GameScreen}
+          />
+        </Stack.Group>
       </Stack.Navigator>
     </NavigationContainer>
   );

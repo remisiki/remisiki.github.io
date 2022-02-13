@@ -4,7 +4,7 @@ import SideBar from './SideBar';
 function HomeScreen({route, navigation}) {
   const avatar = require("../assets/avatar.jpg");
   return (
-    <body>
+    <div>
       <div className="twitter-tl" id="twitter-tl" >
         <TwitterTimeLine name="remisiki" />
       </div>
@@ -22,7 +22,7 @@ function HomeScreen({route, navigation}) {
         </article>
         <SideBar />
       </div>
-    </body>
+    </div>
   );
 }
 

@@ -4,7 +4,7 @@ import SideBar from './SideBar';
 function GameScreen({route, navigation}) {
   // const avatar = require("../assets/avatar.jpg");
   return (
-    <body>
+    <div>
       <div className="twitter-tl" id="twitter-tl" >
         <TwitterTimeLine name="mukei_stg"/>
       </div>
@@ -18,7 +18,7 @@ function GameScreen({route, navigation}) {
         </article>
         <SideBar />
       </div>
-    </body>
+    </div>
   );
 }
 

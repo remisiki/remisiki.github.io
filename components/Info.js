@@ -4,7 +4,7 @@ import SideBar from './SideBar'
 function InfoScreen({route, navigation}) {
   const { itemId, otherParam } = route.params;
   return (
-    <body>
+    <div>
       <div id="content" className="wrapper doc">
         <article>
           <h1>About Remisiki</h1>
@@ -63,7 +63,7 @@ function InfoScreen({route, navigation}) {
         </article>
         <SideBar />
       </div>
-    </body>
+    </div>
   );
 }
 

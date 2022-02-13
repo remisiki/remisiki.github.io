@@ -45,6 +45,9 @@ function NavigationBlock({name}) {
         <a className="title-center" onClick={navigate("Game")} id="Game">
           Game
         </a>
+        <a className="title-center" onClick={navigate("Gallery")} id="Gallery">
+          Gallery
+        </a>
       </div>
       <div className="right-action-container">
         <div className="title-right" onClick={()=>{ i18n.changeLanguage('en'); switchLang("en"); }} id="en">

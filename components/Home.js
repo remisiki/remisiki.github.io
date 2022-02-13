@@ -3,6 +3,7 @@ import SideBar from './SideBar';
 
 function HomeScreen({route, navigation}) {
   const avatar = require("../assets/avatar.jpg");
+  const kyoto = require("../assets/IMG_20191220_105846.webp");
   return (
     <div>
       <div className="twitter-tl" id="twitter-tl" >
@@ -17,10 +18,24 @@ function HomeScreen({route, navigation}) {
             This is my first homepage website made with <a href="https://ja.reactjs.org/">React.js</a>, and please forgive me for not being familiar with web design...
           </p>
           <p>
+            Homepage mainly contains my portfolio, public repositories, game status or other interests, galleries and future blogs if I have time to post some.
+          </p>
+          <p>
+            Feel free to move around to other tabs!
+          </p>
+          <p>
             My profile icon comes from <a href="https://www.pixiv.net/artworks/28137362">here</a>.
           </p>
+          <div className="gap">
+          </div>
+          <p>
+            This is a landscape photo taken in my favorite city, Kyoto. More photos can be found in Gallery.
+          </p>
+          <img src={kyoto} />
         </article>
-        <SideBar />
+        <div className="gap"> </div>
+        {/*<SideBar />*/}
+        
       </div>
     </div>
   );

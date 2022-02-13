@@ -64,6 +64,10 @@ article h1,article h2,article h3,article h4,article h5,article h6 {
     margin-top: 1.3em;
 }
 
+article h2,article h3,article h4,article h5,article h6 {
+    color: #d9aacd;
+}
+
 article h1 a,article h2 a,article h3 a,article h4 a,article h5 a,article h6 a {
     font-weight: inherit;
     color: #333;
@@ -81,8 +85,16 @@ article h1 {
 
 article h2 {
     font-size: 25px;
-    margin-bottom: 9px;
-    border-bottom: 2px solid #eee;
+    margin-bottom: 40px;
+}
+
+article h2 span{
+    border-top: 4px solid #89c3eb;
+    border-bottom: 4px solid #89c3eb;
+}
+
+article h2 span::before, article h2 span::after {
+    content: "\2740";
 }
 
 article h3 {
@@ -1005,7 +1017,7 @@ aside a[href^="http"]:after,.doc a[href^="http"]:after {
     display: none;
 }
 
-#totop {
+.totop {
     z-index: 1;
     position: fixed;
     right: 5%;
@@ -1019,16 +1031,16 @@ aside a[href^="http"]:after,.doc a[href^="http"]:after {
     /*display: none;*/
 }
 
-#totop:hover {
+.totop:hover {
     filter: drop-shadow(5px 5px 5px #333);
     opacity: 1;
 }
 
-#totop:active {
+.totop:active {
     height: 88px;
 }
 
-#totop.slide-in {
+.slide-in {
     bottom: 1%;
     /*display: block;*/
 }
@@ -1060,7 +1072,7 @@ body {
 }
 
 .gap {
-    width: 100vw;
+    /*width: 100vw;*/
     height: 10vh;
 }
 

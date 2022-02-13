@@ -16,7 +16,8 @@ function GameScreen({route, navigation}) {
             HogeHoge
           </p>
         </article>
-        <SideBar />
+        {/*<SideBar />*/}
+        <div className="gap"></div>
       </div>
     </div>
   );

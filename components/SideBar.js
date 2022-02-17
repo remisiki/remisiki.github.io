@@ -2,8 +2,25 @@ import style from '../assets/index.css';
 import { useNavigation } from '@react-navigation/native';
 import $ from 'jquery'
 
-function SideBar() {
+function SideNavi(name) {
+	return (
+		<li key={name}>
+			<a href={"#" + name} id={name + "Navi"}>
+				<span>
+					{name}
+				</span>
+			</a>
+		</li>
+	);
+}
+
+function SideBar({sections}) {
 	const navigation = useNavigation();
+	var navis = [];
+	for (var i = 0; i < sections.length; i ++) {
+		navis.push(SideNavi(sections[i]));
+	}
+	console.log(navis[0]);
 	return (
 		<aside className="sidebar" id="sidebar">
 	        {/*<a href="#" onclick="javascript:foldSideBar(); return false;">
@@ -13,33 +30,7 @@ function SideBar() {
 		            <span lang="en">Contents</span>
 		        </h3>
 		        <ul id="side1">
-	          		<a href="#" onClick={() => {
-	            		navigation.navigate('Home', {
-			              // itemId: 86,
-			              // otherParam: 'anything you want here',
-	            		});
-	            		// window.location.reload();
-	            		$('#twitter-tl').html();
-
-	          		}}>
-	            		<span lang="en">Home</span>
-	          		</a>
-	          		<a href="#" onClick={() => {
-	            		navigation.navigate('Info', {
-			              // itemId: 86,
-			              // otherParam: 'anything you want here',
-	            		});
-	          		}}>
-	            		<span lang="en">Info</span>
-	          		</a>
-		          	<a href="#" onClick={() => {
-	            		navigation.navigate('Repos', {
-			              // itemId: 86,
-			              // otherParam: 'anything you want here',
-	            		});
-	          		}}>
-		            	<span lang="en">Repo</span>
-		          	</a>
+	          		{navis}
 	        	</ul>
         	</div>
       	</aside>

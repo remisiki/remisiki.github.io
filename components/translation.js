@@ -19,4 +19,14 @@ export default {
             'Game': 'ゲーム',
         }
     },
+    zh: {
+        translation: {
+            'Welcome': 'Welcome',
+            'Home': '主頁',
+            'Remisiki\'s Home': 'Remisiki\'s Home',
+            'Info': 'Info',
+            'Repos': 'レポジトリ',
+            'Game': 'ゲーム',
+        }
+    },
 }

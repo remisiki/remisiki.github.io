@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigation } from '@react-navigation/native';
-import $ from 'jquery'
+import $ from 'jquery';
 import { useTranslation } from 'react-i18next';
-import './i18n'
+import './i18n';
 
 function navigate(path) {
   const navigation = useNavigation();
@@ -57,7 +57,7 @@ function NavigationBlock({name}) {
         <div className="title-right" onClick={()=>{ i18n.changeLanguage('ja'); switchLang("ja"); }} id="ja">
           あ
         </div>
-        <div className="title-right" id="zh">
+        <div className="title-right" onClick={()=>{ i18n.changeLanguage('zh'); switchLang("zh"); }} id="zh">
           中
         </div>
       </div>

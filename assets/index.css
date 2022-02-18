@@ -1233,6 +1233,16 @@ html {
     list-style: none;
 }
 
+#langlist ul {
+    list-style: none;
+}
+
+#langlist {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+}
+
 @media only screen and (max-width: 425px) {
     #title {
         display: none;

@@ -2,7 +2,19 @@ import style from '../assets/index.css';
 import SideBar from './SideBar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import brands from '@fortawesome/fontawesome-free-brands';
-import {scrollWith} from './scroll';
+import ReactCountryFlag from "react-country-flag"
+import { scrollWith } from './scroll';
+
+function Flag({code}) {
+  return (
+    <ReactCountryFlag countryCode={code} svg 
+      style={{
+        paddingLeft: '5px',
+        paddingBottom: '5px',
+      }}
+    />
+  );
+}
 
 function InfoScreen({route, navigation}) {
   // const { itemId, otherParam } = route.params;
@@ -63,7 +75,9 @@ function InfoScreen({route, navigation}) {
           </h2>
           <ul>
             <li>
-              English&#127468;&#127463;&#127482;&#127480;
+              English
+              <Flag code="GB" />
+              <Flag code="US" />
               <p>
                 Can read most English without difficulties, but writing and speaking is not very good... If you find some words improper here or in other my pages, please let me know!
               </p>
@@ -75,7 +89,10 @@ function InfoScreen({route, navigation}) {
               </p>
             </li>
             <li>
-              Chinese&#127464;&#127475;&#127481;&#127484;&#127469;&#127472;
+              Chinese
+              <Flag code="CN" />
+              <Flag code="TW" />
+              <Flag code="HK" />
             </li>
             <ul>
               <li>
@@ -101,13 +118,15 @@ function InfoScreen({route, navigation}) {
               </li>
             </ul>
             <li>
-              Japanese&#127471;&#127477;
+              Japanese
+              <Flag code="JP" />
               <p>
                 Quite familiar with, yet still far from mastering. Listening and reading are OK, but writing Japanese needs google translate sometimes... My words written in Japanese may seem a bit strange and please let me know if so.
               </p>
             </li>
             <li>
-              German&#127465;&#127466;
+              German
+              <Flag code="DE" />
               <p>
                 Knows very limited about it. I have just started learning German, so conversations are not possible at present...
               </p>

@@ -1,0 +1,16 @@
+{
+    "C": "#555555",
+    "C++": "#f34b7d",
+    "Java": "#b07219",
+    "JavaScript": "#f1e05a",
+    "Python": "#3572A5",
+    "Verilog": "#b2b7f8",
+    "Scala": "#c22d40",
+    "Assembly": "#6E4C13",
+    "HTML": "#e34c26",
+    "CSS": "#563d7c",
+    "TypeScript": "#2b7489",
+    "Shell": "#89e051",
+    "Batchfile": "#C1F12E",
+    "Pascal": "#E3F171"
+}

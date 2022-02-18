@@ -1,10 +1,12 @@
 import TwitterTimeLine from './Twitter';
 import SideBar from './SideBar';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { scrollWith } from './scroll';
 
 function HomeScreen({route, navigation}) {
   const avatar = require("../assets/avatar.jpg");
   const kyoto = require("../assets/IMG_20191220_105846.webp");
+  scrollWith([]);
   return (
     <div>
       <div className="twitter-tl" id="twitter-tl" >

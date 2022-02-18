@@ -7,15 +7,15 @@ function scrollWith(sections) {
 }
 
 function naviChanger(sections) {
-  var y = document.documentElement.scrollTop;
-  var h = document.documentElement.clientHeight;
+  const y = document.documentElement.scrollTop;
+  const h = document.documentElement.clientHeight;
   $('.totop').toggleClass('slide-in', y > h)
-  for (var i = 0; i < sections.length; i++) {
-    var section = "#" + sections[i];
-    var section_next = "#" + sections[i + 1];
-    var section_navi = section + "Navi";
-    var prev_h = $(section)[0].offsetTop - 150;
-    var next_h;
+  for (let i = 0; i < sections.length; i++) {
+    const section = "#" + sections[i];
+    const section_next = "#" + sections[i + 1];
+    const section_navi = section + "Navi";
+    const prev_h = $(section)[0].offsetTop - 150;
+    let next_h;
     if (i == sections.length - 1) {
       next_h = document.documentElement.scrollHeight;
     }

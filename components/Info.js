@@ -28,9 +28,6 @@ function InfoScreen({route, navigation}) {
         <article>
           <h1>About Remisiki</h1>
           <p>
-            {process.env.REACT_APP_GH}
-          </p>
-          <p>
             Remisiki is a junior student major in ECE (Electrical & Computing Engineering), who likes programming and single-player games. 
           </p>
           <h2 id={sections[0]}>

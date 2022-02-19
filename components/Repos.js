@@ -5,6 +5,7 @@ import { get } from './request';
 import Chart from './Chart';
 import List from './List';
 import { scrollWith } from './scroll';
+import Box from './Box';
 
 async function mostUsedLanguage() {
   let content = await get("https://api.github.com/users/remisiki/repos");
@@ -54,6 +55,19 @@ async function mostUsedLanguage() {
   return (sortable_data);
 }
 
+function Project({name, description, href, thumb, lang}) {
+  const avatar = require("../assets/avatar.jpg");
+  return (
+    <a className="cell" href={href}>
+      <img src={avatar} />
+      <span className="title">{name}</span>
+      <br />
+      <span className="content">{description}</span>
+      <Box lang={lang} text={lang} width={`${lang.length * 9}px`} />
+    </a>
+  );
+}
+
 function ReposScreen({route, navigation}) {
   let [lists, setLists] = useState(false);
   useEffect(async () => {
@@ -65,6 +79,17 @@ function ReposScreen({route, navigation}) {
     <div>
       { lists && <Chart data={lists} />}
       { lists && <List data={lists} />}
+      <div className="cell_container">
+        <Project name="remisiki-home" description="Homepage Web App" href="https://github.com/remisiki/remisiki-home" thumb="" lang="JavaScript" />
+        <Project name="kettyan-bot" description="Telegram Pixiv Illust Bot" href="https://remisiki.github.io/kettyan-bot/" thumb="" lang="Python" />
+        <Project name="umjicanvas" description="Activity Count for UM-JI Canvas" href="https://github.com/remisiki/umjicanvas" thumb="" lang="Java" />
+        <Project name="GMM-Demux" description="Barcoding Data Processing Tool" href="https://gmm-demux.readthedocs.io/en/latest/" thumb="" lang="Python" />
+        <Project name="ECE4710J" description="UM-JI Course File" href="https://github.com/remisiki/ECE4710J" thumb="" lang="Python" />
+        <Project name="VE370" description="UM-JI Course File" href="https://github.com/remisiki/VE370" thumb="" lang="Verilog" />
+        <Project name="Test" description="hogehoge" href="" thumb="" lang="Batchfile" />
+        <Project name="ここまでだ。。。" description="もっとがんばります！" href="" thumb="" lang="C++" />
+      </div>
+      <div className="gap"></div>
     </div>
   );
 }

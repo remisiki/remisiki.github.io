@@ -808,7 +808,7 @@ body {
     background-size: contain;
 }
 
-.wrapper article, .twitter-tl {
+.wrapper article, .twitter-tl, .cell {
     border-radius: 15px;
     border: solid;
     border-color: #2083e0;
@@ -821,7 +821,7 @@ body {
     transition: box-shadow 0.1s ease-in-out, -moz-box-shadobox-shadow 0.1s ease-in-out, -webkit-box-shadow 0.1s ease-in-out;
 }
 
-.wrapper article:hover, .twitter-tl:hover {
+.wrapper article:hover, .twitter-tl:hover, .cell:hover {
     box-shadow: 0 0 20px rgba(0,0,0,0.6);
     -moz-box-shadow: 0 0 20px rgba(0,0,0,0.6);
     -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.6);
@@ -987,9 +987,56 @@ html {
 }
 
 #langlist {
-    position: absolute;
+    position: fixed;
     left: 70px;
     top: 50%;
+}
+
+.cell {
+    position: relative;
+    width: 20vw;
+    height: 25vh;
+    margin-left: 1em;
+    margin-bottom: 5em;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.cell:hover {
+    transform-origin: center;
+    transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    cursor: pointer;
+}
+
+.cell_container {
+    display: inline-grid;
+    grid-template-columns: 25vw 25vw 25vw;
+    grid-template-rows: 35vh 35vh 35vh;
+    position: relative;
+    left: 25vw;
+    top: 120px;
+    width: 70vw;
+    height: auto;
+}
+
+.cell img {
+    display: block;
+    height: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cell .title {
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.cell .content {
+    color: #333;
 }
 
 @media only screen and (max-width: 425px) {

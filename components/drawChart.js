@@ -3,7 +3,11 @@ import $ from 'jquery';
 import cmap from './cmap.json';
 
 const drawChart = (element, data) => {
-  const colors = data.map((x) => (cmap[x.key]));
+  let colors = data.map((x) => (cmap[x.key] || ({"C": {
+    "color": "#555555",
+    "font": "#eee"
+  }})));
+  colors = colors.map((x) => (x.color));
   const boxSize = 1400;
 
   d3.select(element).select("svg").remove(); // Remove the old svg

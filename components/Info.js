@@ -19,6 +19,7 @@ function Flag({code}) {
 function InfoScreen({route, navigation}) {
   // const { itemId, otherParam } = route.params;
   // const totop = require("../assets/page-top.webp");
+  
   const sections = ["Accounts", "Languages", "Programming", "Interests"];
   scrollWith(sections);
   return (
@@ -26,6 +27,9 @@ function InfoScreen({route, navigation}) {
       <div id="content" className="wrapper doc">
         <article>
           <h1>About Remisiki</h1>
+          <p>
+            {process.env.REACT_APP_GH}
+          </p>
           <p>
             Remisiki is a junior student major in ECE (Electrical & Computing Engineering), who likes programming and single-player games. 
           </p>

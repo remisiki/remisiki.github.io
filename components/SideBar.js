@@ -20,7 +20,6 @@ function SideBar({sections}) {
 	for (var i = 0; i < sections.length; i ++) {
 		navis.push(SideNavi(sections[i]));
 	}
-	console.log(navis[0]);
 	return (
 		<aside className="sidebar" id="sidebar">
 	        {/*<a href="#" onclick="javascript:foldSideBar(); return false;">

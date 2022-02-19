@@ -4,6 +4,7 @@ import SideBar from './SideBar';
 import { get } from './request';
 import Chart from './Chart';
 import List from './List';
+import { scrollWith } from './scroll';
 
 async function mostUsedLanguage() {
   let content = await get("https://api.github.com/users/remisiki/repos");
@@ -59,6 +60,7 @@ function ReposScreen({route, navigation}) {
     lists = await mostUsedLanguage();
     setLists(lists);
   },[])
+  scrollWith([]);
   return (
     <div>
       { lists && <Chart data={lists} />}

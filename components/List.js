@@ -1,8 +1,9 @@
-import cmap from './cmap.json';
+import Box from './Box';
 
 function addList(data, sum) {
   return (
     <li key={data.key}>
+      <Box lang={data.key} />
       {data.key}
       <span>: </span>
       {Math.floor(data.value / sum * 100)}%

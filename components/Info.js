@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import brands from '@fortawesome/fontawesome-free-brands';
 import ReactCountryFlag from "react-country-flag"
 import { scrollWith } from './scroll';
+import $ from 'jquery';
 
 function Flag({code}) {
   return (
@@ -19,7 +20,7 @@ function Flag({code}) {
 function InfoScreen({route, navigation}) {
   // const { itemId, otherParam } = route.params;
   // const totop = require("../assets/page-top.webp");
-  
+  $('a[href^=http]').attr("target", "_blank");
   const sections = ["Accounts", "Languages", "Programming", "Interests"];
   scrollWith(sections);
   return (

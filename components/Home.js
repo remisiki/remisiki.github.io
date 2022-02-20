@@ -34,7 +34,7 @@ function HomeScreen({route, navigation}) {
           <p>
             This is a landscape photo taken in my favorite city, Kyoto. More photos can be found in Gallery.
           </p>
-          <LazyLoadImage src={kyoto} />
+          <LazyLoadImage src={kyoto} effect="blur" />
         </article>
         <div className="gap"> </div>
         {/*<SideBar />*/}

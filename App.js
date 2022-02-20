@@ -55,7 +55,7 @@ function App() {
       <section id="top">
         <NavigationBlock />
       </section>
-      <Stack.Navigator initialRouteName="Repos" >
+      <Stack.Navigator initialRouteName="Home" >
         <Stack.Group
           screenOptions={{ headerShown: false }}
         >

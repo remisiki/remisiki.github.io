@@ -6,6 +6,7 @@ import Chart from './Chart';
 import List from './List';
 import { scrollWith } from './scroll';
 import Box from './Box';
+import $ from 'jquery';
 
 async function mostUsedLanguage() {
   let content = await get("https://api.github.com/users/remisiki/repos");
@@ -69,6 +70,7 @@ function Project({name, description, href, thumb, lang}) {
 }
 
 function ReposScreen({route, navigation}) {
+  $('a[href^=http]').attr("target", "_blank");
   let [lists, setLists] = useState(false);
   useEffect(async () => {
     lists = await mostUsedLanguage();

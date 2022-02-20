@@ -1,0 +1,35 @@
+{
+    "ja": {
+        "translation": {
+            "Welcome": "ようこそ",
+            "Home": "ホーム",
+            "Remisiki\"s Home": "れみしきのへや",
+            "Info": "プロフィール",
+            "Repos": "レポジトリ",
+            "Game": "ゲーム",
+            "milano0": "ミラノ"
+        }
+    },
+    "en": {
+        "translation": {
+            "Welcome": "Welcome",
+            "Home": "Home",
+            "Remisiki\"s Home": "Remisiki\"s Home",
+            "Info": "Info",
+            "Repos": "レポジトリ",
+            "Game": "ゲーム",
+            "milano0": "Photo taken on top of Milan Cathedral, Italy. BlaBlaBla"
+        }
+    },
+    "zh": {
+        "translation": {
+            "Welcome": "Welcome",
+            "Home": "主頁",
+            "Remisiki\"s Home": "Remisiki\"s Home",
+            "Info": "Info",
+            "Repos": "レポジトリ",
+            "Game": "ゲーム",
+            "milano0": "Photo taken on top of Milan Cathedral, Italy. BlaBlaBla"
+        }
+    }
+}

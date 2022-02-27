@@ -61,6 +61,7 @@ article {
     max-width: 100vw;
     overflow-wrap: break-word;
     margin-left: 1em;
+    margin-bottom: 5vh;
 }
 
 article h1,article h2,article h3,article h4,article h5,article h6 {
@@ -1129,6 +1130,58 @@ html {
 .foot {
     position: absolute;
     bottom: 0;
+}
+
+.status {
+    font-size: 70%;
+    text-align: center;
+    display: inline-block;
+    border-radius: 13px;
+    padding: 3px;
+    margin: 5px;
+    border: 1px solid;
+    user-select: none;
+}
+
+.complete {
+    color: #0de1bd;
+    border-color: #0de1bd;
+}
+
+.progress {
+    color: #b8a427;
+    border-color: #b8a427;
+}
+
+.pend {
+    color: #69675e;
+    border-color: #69675e;
+}
+
+.stop {
+    color: #f58c8c;
+    border-color: #f58c8c;
+}
+
+.red-text {
+    color: #f58c8c;
+}
+
+.green-text {
+    color: #0de1bd;
+}
+
+.brown-text {
+    color: #b8a427;
+}
+
+.fold-block {
+    display: none;
+}
+
+.fold {
+    user-select: none;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 425px) {

@@ -9,7 +9,6 @@ import {
   InfoScreen,
   ReposScreen,
   GameScreen,
-  GalleryScreen,
   NavigationBlock,
 } from './components';
 
@@ -74,10 +73,6 @@ function App() {
           <Stack.Screen 
             name="Game" 
             component={GameScreen}
-          />
-          <Stack.Screen 
-            name="Gallery" 
-            component={GalleryScreen}
           />
         </Stack.Group>
       </Stack.Navigator>

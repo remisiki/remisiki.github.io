@@ -13,6 +13,9 @@ function navigate(path) {
     $('#' + path).addClass("title-selected");
     navigation.navigate(path, {});
     $('.totop').click();
+    if (path === "Home") {
+      window.location.reload();
+    }
   }
   );
 }
@@ -45,9 +48,6 @@ function NavigationBlock({name}) {
         </a>
         <a className="title-center" onClick={navigate("Game")} id="Game">
           Game
-        </a>
-        <a className="title-center" onClick={navigate("Gallery")} id="Gallery">
-          Gallery
         </a>
       </div>
       <div className="right-action-container">

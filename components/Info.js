@@ -1,27 +1,30 @@
 import style from '../assets/index.css';
 import SideBar from './SideBar';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import brands from '@fortawesome/fontawesome-free-brands';
 import ReactCountryFlag from "react-country-flag"
 import { scrollWith } from './scroll';
 import $ from 'jquery';
+import { useTranslation } from 'react-i18next';
 
 function Flag({code}) {
   return (
     <ReactCountryFlag countryCode={code} svg 
       style={{
-        paddingLeft: '5px',
-        paddingBottom: '5px',
+        marginLeft: '5px',
       }}
     />
   );
+}
+
+function unfold(id) {
+  $(`#${id}`).toggle();
 }
 
 function InfoScreen({route, navigation}) {
   // const { itemId, otherParam } = route.params;
   // const totop = require("../assets/page-top.webp");
   $('a[href^=http]').attr("target", "_blank");
-  const sections = ["Accounts", "Languages", "Programming", "Interests"];
+  const { t, i18n } = useTranslation();
+  const sections = ["Languages", "Programming", "Interests"];
   scrollWith(sections);
   return (
     <div>
@@ -32,47 +35,6 @@ function InfoScreen({route, navigation}) {
             Remisiki is a junior student major in ECE (Electrical & Computing Engineering), who likes programming and single-player games. 
           </p>
           <h2 id={sections[0]}>
-            <span>Social Accounts</span>
-          </h2>
-          <p>
-            <FontAwesomeIcon icon="fa-brands fa-twitter" />
-            {'  '}Twitter for study:{'  '}
-            <a href="https://twitter.com/remisiki">@remisiki</a>
-          </p>
-          <p>
-            <FontAwesomeIcon icon="fa-brands fa-github" />
-            {'  '}Github:{'  '}
-            <a href="https://github.com/remisiki">Remisiki</a>
-          </p>
-          <p>
-            <FontAwesomeIcon icon="fa-brands fa-telegram" />
-            {'  '}Telegram:{'  '}
-            <a href="https://t.me/remisiki">@remisiki</a>
-          </p>
-          <p>
-            <FontAwesomeIcon icon="fa-brands fa-twitter" />
-            {'  '}Twitter for game:{'  '}
-            <a href="https://twitter.com/mukei_stg">@mukei_stg</a>
-          </p>
-          <p>
-            <FontAwesomeIcon icon="fa-brands fa-discord" />
-            {'  '}Discord:{'  '}
-            <a href="https://discordapp.com/users/422313209937002507">むけい#6131</a>
-          </p>
-          <p>
-            <FontAwesomeIcon icon="fa-brands fa-steam" />
-            {'  '}Steam:{'  '}
-            <a href="https://steamcommunity.com/profiles/76561198843774402">むけい</a>
-          </p>
-          <p>
-            <FontAwesomeIcon icon="fa-brands fa-youtube" />
-            {'  '}YouTube:{'  '}
-            <a href="https://www.youtube.com/channel/UC4mJDWoAdQBa-FUx_FXoiQw">れみしき</a>
-          </p>
-          <p>
-            I use Twitter and Telegram quite often for private messages. <span className="yellow-marker-thin">Be careful that there may be not-safe-for-work retweets in my Twitter for game account!</span> Details of my Github repositories may be found in Repos tab. Feel free to add me on Steam, Discord and visit my Youtube channel to discover my gaming process!
-          </p>
-          <h2 id={sections[1]}>
             <span>Languages</span>
           </h2>
           <ul>
@@ -134,39 +96,125 @@ function InfoScreen({route, navigation}) {
               </p>
             </li>
           </ul>
-          <h2 id={sections[2]}>
+          <h2 id={sections[1]}>
             <span>Programming</span>
           </h2>
           <ul>
             <li>
-              C
+              <a onClick={() => unfold("c")} className="fold">C</a>
+              <div className="fold-block" id="c">
+                <p className="brown-text">
+                  {t("futuu")}
+                </p>
+                <p>
+                  {t("c")}
+                </p>
+              </div>
             </li>
             <li>
-              Pascal
+              <a onClick={() => unfold("pascal")} className="fold">Pascal</a>
+              <div className="fold-block" id="pascal">
+                <p className="green-text">
+                  {t("gut")}
+                </p>
+                <p className="red-text">
+                  {t("forget")}
+                </p>
+                <p>
+                  {t("pascal")}
+                </p>
+              </div>
             </li>
             <li>
-              C++
+              <a onClick={() => unfold("cpp")} className="fold">C++</a>
+              <div className="fold-block" id="cpp">
+                <p className="green-text">
+                  {t("gut")}
+                </p>
+                <p className="red-text">
+                  {t("forget")}
+                </p>
+                <p>
+                  {t("cpp")}
+                </p>
+              </div>
             </li>
             <li>
-              Java
+              <a onClick={() => unfold("java")} className="fold">Java</a>
+              <div className="fold-block" id="java">
+                <p className="brown-text">
+                  {t("futuu")}
+                </p>
+                <p>
+                  {t("java")}
+                </p>
+              </div>
             </li>
             <li>
-              Scala
+              <a onClick={() => unfold("scala")} className="fold">Scala</a>
+              <div className="fold-block" id="scala">
+                <p className="red-text">
+                  {t("bad")}
+                </p>
+                <p>
+                  {t("scala")}
+                </p>
+              </div>
             </li>
             <li>
-              Python
+              <a onClick={() => unfold("python")} className="fold">Python</a>
+              <div className="fold-block" id="python">
+                <p className="green-text">
+                  {t("gut")}
+                </p>
+                <p>
+                  {t("python")}
+                </p>
+              </div>
             </li>
             <li>
-              RISC-V Assembly
+              <a onClick={() => unfold("riscv")} className="fold">RISC-V Assembly</a>
+              <div className="fold-block" id="riscv">
+                <p className="red-text">
+                  {t("bad")}
+                </p>
+                <p>
+                  {t("riscv")}
+                </p>
+              </div>
             </li>
             <li>
-              Verilog
+              <a onClick={() => unfold("verilog")} className="fold">Verilog</a>
+              <div className="fold-block" id="verilog">
+                <p className="green-text">
+                  {t("gut")}
+                </p>
+                <p>
+                  {t("verilog")}
+                </p>
+              </div>
             </li>
             <li>
-              Elm
+              <a onClick={() => unfold("vb")} className="fold">Visual Basic</a>
+              <div className="fold-block" id="vb">
+                <p className="brown-text">
+                  {t("futuu")}
+                </p>
+                <p>
+                  {t("vb")}
+                </p>
+              </div>
             </li>
             <li>
-              JavaScript
+              <a onClick={() => unfold("javascript")} className="fold">JavaScript</a>
+              <div className="fold-block" id="javascript">
+                <p className="brown-text">
+                  {t("futuu")}
+                </p>
+                <p>
+                  {t("javascript")}
+                </p>
+              </div>
             </li>
           </ul>
           <p>
@@ -183,7 +231,7 @@ function InfoScreen({route, navigation}) {
               Sublime Text
             </li>
           </ul>
-          <h2 id={sections[3]}>
+          <h2 id={sections[2]}>
             <span>Interests</span>
           </h2>
           <ul>

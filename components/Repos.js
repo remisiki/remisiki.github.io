@@ -86,6 +86,7 @@ function ReposScreen({route, navigation}) {
         <Project name="kettyan-bot" description="Telegram Pixiv Illust Bot" href="https://remisiki.github.io/kettyan-bot/" thumb="" lang="Python" />
         <Project name="umjicanvas" description="Activity Count for UM-JI Canvas" href="https://github.com/remisiki/umjicanvas" thumb="" lang="Java" />
         <Project name="GMM-Demux" description="Barcoding Data Processing Tool" href="https://gmm-demux.readthedocs.io/en/latest/" thumb="" lang="Python" />
+        <Project name="k-gatya" description="Random Pixiv Artworks Webpage" href="https://remisiki.github.io/k-gatya/" thumb="" lang="JavaScript" />
         <Project name="ECE4710J" description="UM-JI Course File" href="https://github.com/remisiki/ECE4710J" thumb="" lang="Python" />
         <Project name="VE370" description="UM-JI Course File" href="https://github.com/remisiki/VE370" thumb="" lang="Verilog" />
         <Project name="Test" description="hogehoge" href="" thumb="" lang="Batchfile" />

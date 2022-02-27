@@ -19,9 +19,15 @@ function unfold(id) {
   $(`#${id}`).toggle();
 }
 
+function Folder({name, id}) {
+  return (
+    <a onClick={() => unfold(id)} className="fold">
+      {name}
+    </a>
+  );
+}
+
 function InfoScreen({route, navigation}) {
-  // const { itemId, otherParam } = route.params;
-  // const totop = require("../assets/page-top.webp");
   $('a[href^=http]').attr("target", "_blank");
   const { t, i18n } = useTranslation();
   const sections = ["Languages", "Programming", "Interests"];
@@ -30,78 +36,74 @@ function InfoScreen({route, navigation}) {
     <div>
       <div id="content" className="wrapper doc">
         <article>
-          <h1>About Remisiki</h1>
-          <p>
-            Remisiki is a junior student major in ECE (Electrical & Computing Engineering), who likes programming and single-player games. 
-          </p>
+          <h1>{t("ifh")}</h1>
+          <p>{t("ifp0")}</p>
+          <p><span className="yellow-marker-thin">{t("ifp1")}</span></p>
           <h2 id={sections[0]}>
-            <span>Languages</span>
+            <span>{t("ifs0")}</span>
           </h2>
           <ul>
             <li>
-              English
+              <Folder name={t("ifs0l0")} id="en1" />
               <Flag code="GB" />
               <Flag code="US" />
-              <p>
-                Can read most English without difficulties, but writing and speaking is not very good... If you find some words improper here or in other my pages, please let me know!
-              </p>
-              <p>
-                I have been taking all my undergraduate courses in English, so I think there is no problem with my professional English. But when actually travelling to English-speaking countries, I found native speakers all talking so fast that I could not understand them...
-              </p>
-              <p>
-                Personally speaking, I like British accents since they always sound quite "gentlemen" (?).
-              </p>
+              <div className="fold-block" id="en1">
+                <p>{t("ifenp0")}</p>
+                <p>{t("ifenp1")}</p>
+                <p>{t("ifenp2")}</p>
+              </div>
             </li>
             <li>
-              Chinese
+              <Folder name={t("ifs0l1")} id="zh1" />
               <Flag code="CN" />
               <Flag code="TW" />
               <Flag code="HK" />
+            
+              <div className="fold-block" id="zh1">
+                <ul>
+                  <li>
+                    <Folder name={t("ifs0l1l0")} id="zhcn" />
+                    <div className="fold-block" id="zhcn">
+                      <p>{t("ifcnp0")}</p>
+                    </div>
+                  </li>
+                  <li>
+                    <Folder name={t("ifs0l1l1")} id="zhsh" />
+                    <div className="fold-block" id="zhsh">
+                      <p>{t("ifshp0")}</p>
+                    </div>
+                  </li>
+                  <li>
+                    <Folder name={t("ifs0l1l2")} id="zhhk" />
+                    <div className="fold-block" id="zhhk">
+                      <p>{t("ifhkp0")}</p>
+                      <p>{t("ifhkp1")}</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </li>
-            <ul>
-              <li>
-                Mandarin
-              </li>
-              <p>
-                Both Peking Mandarin and Taiwan Mandarin are OK with me. For writing, I prefer traditional Chinese (they are nicer). In fact, modern Chinese pronunciation (Mandarin) is too simple and I do not like it very much... If possible, I will talk in Shanghainese instead.
-              </p>
-              <li>
-                Shanghainese
-                <p>
-                  Native language, spoken from my earliest childhood. I like it, but few people know about Shanghainese nowadays :(
-                </p>
-              </li>
-              <li>
-                Cantonese
-                <p>
-                  Not so familiar with, but know many about it. Maybe better at listening than speaking? Since there is no chance for me to practice speaking Cantonese (at least now).
-                </p>
-                <p>
-                  Pronunciations are very interesting, and many similar points can be found between Cantonese and Japanese Kanji. 
-                </p>
-              </li>
-            </ul>
             <li>
-              Japanese
+              <Folder name={t("ifs0l2")} id="ja1" />
               <Flag code="JP" />
-              <p>
-                Quite familiar with, yet still far from mastering. Listening and reading are OK, but writing Japanese needs google translate sometimes... My words written in Japanese may seem a bit strange and please let me know if so.
-              </p>
+              <div className="fold-block" id="ja1">
+                <p>{t("ifjap0")}</p>
+              </div>
             </li>
             <li>
-              German
+              <Folder name={t("ifs0l3")} id="de1" />
               <Flag code="DE" />
-              <p>
-                Knows very limited about it. I have just started learning German, so conversations are not possible at present...
-              </p>
+              <div className="fold-block" id="de1">
+                <p>{t("ifdep0")}</p>
+              </div>
             </li>
           </ul>
           <h2 id={sections[1]}>
-            <span>Programming</span>
+            <span>{t("ifs1")}</span>
           </h2>
           <ul>
             <li>
-              <a onClick={() => unfold("c")} className="fold">C</a>
+              <Folder name="C" id="c" />
               <div className="fold-block" id="c">
                 <p className="brown-text">
                   {t("futuu")}
@@ -112,7 +114,7 @@ function InfoScreen({route, navigation}) {
               </div>
             </li>
             <li>
-              <a onClick={() => unfold("pascal")} className="fold">Pascal</a>
+              <Folder name="Pascal" id="pascal" />
               <div className="fold-block" id="pascal">
                 <p className="green-text">
                   {t("gut")}
@@ -126,7 +128,7 @@ function InfoScreen({route, navigation}) {
               </div>
             </li>
             <li>
-              <a onClick={() => unfold("cpp")} className="fold">C++</a>
+              <Folder name="C++" id="cpp" />
               <div className="fold-block" id="cpp">
                 <p className="green-text">
                   {t("gut")}
@@ -140,7 +142,7 @@ function InfoScreen({route, navigation}) {
               </div>
             </li>
             <li>
-              <a onClick={() => unfold("java")} className="fold">Java</a>
+              <Folder name="Java" id="java" />
               <div className="fold-block" id="java">
                 <p className="brown-text">
                   {t("futuu")}
@@ -151,9 +153,8 @@ function InfoScreen({route, navigation}) {
               </div>
             </li>
             <li>
-              <a onClick={() => unfold("scala")} className="fold">Scala</a>
-              <div className="fold-block" id="scala">
-                <p className="red-text">
+              <Folder name="Scala" id="scala" />
+              <div className="fold-block" id="scala"> <p className="red-text">
                   {t("bad")}
                 </p>
                 <p>
@@ -162,7 +163,7 @@ function InfoScreen({route, navigation}) {
               </div>
             </li>
             <li>
-              <a onClick={() => unfold("python")} className="fold">Python</a>
+              <Folder name="Python" id="python" />
               <div className="fold-block" id="python">
                 <p className="green-text">
                   {t("gut")}
@@ -173,7 +174,7 @@ function InfoScreen({route, navigation}) {
               </div>
             </li>
             <li>
-              <a onClick={() => unfold("riscv")} className="fold">RISC-V Assembly</a>
+              <Folder name="RISC-V Assembly" id="riscv" />
               <div className="fold-block" id="riscv">
                 <p className="red-text">
                   {t("bad")}
@@ -184,7 +185,7 @@ function InfoScreen({route, navigation}) {
               </div>
             </li>
             <li>
-              <a onClick={() => unfold("verilog")} className="fold">Verilog</a>
+              <Folder name="Verilog" id="verilog" />
               <div className="fold-block" id="verilog">
                 <p className="green-text">
                   {t("gut")}
@@ -195,7 +196,7 @@ function InfoScreen({route, navigation}) {
               </div>
             </li>
             <li>
-              <a onClick={() => unfold("vb")} className="fold">Visual Basic</a>
+              <Folder name="Visual Basic" id="vb" />
               <div className="fold-block" id="vb">
                 <p className="brown-text">
                   {t("futuu")}
@@ -206,7 +207,7 @@ function InfoScreen({route, navigation}) {
               </div>
             </li>
             <li>
-              <a onClick={() => unfold("javascript")} className="fold">JavaScript</a>
+              <Folder name="JavaScript" id="javascript" />
               <div className="fold-block" id="javascript">
                 <p className="brown-text">
                   {t("futuu")}
@@ -218,75 +219,99 @@ function InfoScreen({route, navigation}) {
             </li>
           </ul>
           <p>
-            <span className="yellow-marker-thin">My regular gears and favorite text editors for programming:</span>
+            <span className="yellow-marker-thin">{t("ifp2")}</span>
           </p>
           <ul>
-            <li>
-              Desktop PC (Windows 10 with WSL Ubuntu)
-            </li>
-            <li>
-              Notebook PC (Windows 11 & Manjaro Linux)
-            </li>
-            <li>
-              Sublime Text
-            </li>
+            <li>{t("ifp2l0")}</li>
+            <li>{t("ifp2l1")}</li>
+            <li>{t("ifp2l2")}</li>
           </ul>
           <h2 id={sections[2]}>
-            <span>Interests</span>
+            <span>{t("ifs2")}</span>
           </h2>
           <ul>
             <li>
-              STG
-            <ul>
-              <li>
-                Touhou
-              </li>
-              <li>
-                CAVE
-              </li>
-            </ul>
+              <Folder name={t("ifs2l0")} id="ifstg" />
+              <div className="fold-block" id="ifstg">
+                <ul>
+                  <li>
+                    <Folder name={t("ifs2l0l0")} id="ifstgth" />
+                    <div className="fold-block" id="ifstgth">
+                    </div>
+                  </li>
+                  <li>
+                    <Folder name={t("ifs2l0l1")} id="ifstgca" />
+                    <div className="fold-block" id="ifstgca">
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li>
-              Metroroidvania
-            <ul>
-              <li>
-                Hollow Knight
-              </li>
-              <li>
-                Ender Lilies
-              </li>
-              <li>
-                Ori
-              </li>
-            </ul>
+              <Folder name={t("ifs2l1")} id="ifmtr" />
+              <div className="fold-block" id="ifmtr">
+                <ul>
+                  <li>
+                    <Folder name={t("ifs2l1l0")} id="ifmtrhk" />
+                    <div className="fold-block" id="ifmtrhk">
+                    </div>
+                  </li>
+                  <li>
+                    <Folder name={t("ifs2l1l1")} id="ifmtrel" />
+                    <div className="fold-block" id="ifmtrel">
+                    </div>
+                  </li>
+                  <li>
+                    <Folder name={t("ifs2l1l2")} id="ifmtror" />
+                    <div className="fold-block" id="ifmtror">
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li>
-              Other games
-            <ul>
-              <li>
-                Steins;Gate
-              </li>
-              <li>
-                Steins;Gate 0
-              </li>
-              <li>
-                htoL#NiQ
-              </li>
-            </ul>
+              <Folder name={t("ifs2l2")} id="ifog" />
+              <div className="fold-block" id="ifog">
+                <ul>
+                  <li>
+                    <Folder name={t("ifs2l2l0")} id="ifogsg" />
+                    <div className="fold-block" id="ifogsg">
+                    </div>
+                  </li>
+                  <li>
+                    <Folder name={t("ifs2l2l1")} id="ifogsg0" />
+                    <div className="fold-block" id="ifogsg0">
+                    </div>
+                  </li>
+                  <li>
+                    <Folder name={t("ifs2l2l2")} id="ifoghtr" />
+                    <div className="fold-block" id="ifoghtr">
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li>
-              Anime
-            <ul>
-              <li>
-                Steins;Gate
-              </li>
-              <li>
-                Psychopass
-              </li>
-              <li>
-                Monogatari
-              </li>
-            </ul>
+              <Folder name={t("ifs2l3")} id="ifanm" />
+              <div className="fold-block" id="ifanm">
+                <ul>
+                  <li>
+                    <Folder name={t("ifs2l3l0")} id="ifanmsg" />
+                    <div className="fold-block" id="ifanmsg">
+                    </div>
+                  </li>
+                  <li>
+                    <Folder name={t("ifs2l3l1")} id="ifanmpsy" />
+                    <div className="fold-block" id="ifanmpsy">
+                    </div>
+                  </li>
+                  <li>
+                    <Folder name={t("ifs2l3l2")} id="ifanmmg" />
+                    <div className="fold-block" id="ifanmmg">
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </article>

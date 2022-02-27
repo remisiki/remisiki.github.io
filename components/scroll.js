@@ -14,12 +14,12 @@ function naviChanger(sections) {
     const section = "#" + sections[i];
     const section_next = "#" + sections[i + 1];
     const section_navi = section + "Navi";
-    const prev_h = $(section)[0].offsetTop - 150;
-    let next_h;
-    if (i == sections.length - 1) {
-      next_h = document.documentElement.scrollHeight;
+    let prev_h = $(section)[0].offsetTop - 150;
+    if (i === 0) {
+      prev_h = 0;
     }
-    else {
+    let next_h = document.documentElement.scrollHeight;
+    if (i !== sections.length - 1) {
       next_h = $(section_next)[0].offsetTop - 150;
     }
     if ((y >= prev_h) && (y < next_h)) {

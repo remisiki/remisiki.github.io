@@ -237,11 +237,16 @@ function InfoScreen({route, navigation}) {
                   <li>
                     <Folder name={t("ifs2l0l0")} id="ifstgth" />
                     <div className="fold-block" id="ifstgth">
+                      <p>{t("ifs2l0l0p0")}</p>
+                      <p>{t("ifs2l0l0p1")}</p>
+                      <p>{t("ifs2l0l0p2")}</p>
                     </div>
                   </li>
                   <li>
                     <Folder name={t("ifs2l0l1")} id="ifstgca" />
                     <div className="fold-block" id="ifstgca">
+                      <p>{t("ifs2l0l1p0")}</p>
+                      <p>{t("ifs2l0l1p1")}</p>
                     </div>
                   </li>
                 </ul>
@@ -254,16 +259,20 @@ function InfoScreen({route, navigation}) {
                   <li>
                     <Folder name={t("ifs2l1l0")} id="ifmtrhk" />
                     <div className="fold-block" id="ifmtrhk">
+                      <p>{t("ifs2l1l0p0")}</p>
                     </div>
                   </li>
                   <li>
                     <Folder name={t("ifs2l1l1")} id="ifmtrel" />
                     <div className="fold-block" id="ifmtrel">
+                      <p>{t("ifs2l1l1p0")}</p>
+                      <p>{t("ifs2l1l1p1")}</p>
                     </div>
                   </li>
                   <li>
                     <Folder name={t("ifs2l1l2")} id="ifmtror" />
                     <div className="fold-block" id="ifmtror">
+                      <p>{t("ifs2l1l2p0")}</p>
                     </div>
                   </li>
                 </ul>
@@ -276,11 +285,16 @@ function InfoScreen({route, navigation}) {
                   <li>
                     <Folder name={t("ifs2l2l0")} id="ifogsg" />
                     <div className="fold-block" id="ifogsg">
+                      <p>{t("ifs2l2l0p0")}</p>
+                      <p>{t("ifs2l2l0p1")}</p>
                     </div>
                   </li>
                   <li>
                     <Folder name={t("ifs2l2l1")} id="ifogsg0" />
                     <div className="fold-block" id="ifogsg0">
+                      <p>{t("ifs2l2l1p0")}</p>
+                      <p>{t("ifs2l2l1p1")}</p>
+                      <p>{t("ifs2l2l1p2")}</p>
                     </div>
                   </li>
                   <li>

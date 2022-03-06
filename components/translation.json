@@ -22,6 +22,7 @@
             "todo10": "Watch とらドラ.",
             "todo11": "Watch まちかどまぞく.",
             "todo12": "Watch となりの吸血鬼さん.",
+            "todo13": "Build Android app with Java/Kotlin.",
             "complete": "Completed",
             "progress": "In progress",
             "pend": "Pending",
@@ -80,7 +81,21 @@
             "ifs2l3": "Anime",
             "ifs2l3l0": "Steins;Gate",
             "ifs2l3l1": "Psychopass",
-            "ifs2l3l2": "Monogatari"
+            "ifs2l3l2": "Monogatari",
+            "ifs2l0l0p0": "Started playing Touhou since 2016, and (almost) stopped after 2019. For details of achievements, see the Game tab.",
+            "ifs2l0l0p1": "Favorite Touhou game is TH12 東方星蓮船 ～ Undefined Fantastic Object; Others like TH06 東方紅魔郷 ～ the Embodiment of Scarlet Devil, TH11 東方地霊殿 〜 Subterranean Animism are also excellent. I bought both CD and Steam version for these three games, and I think their game content and music are among the best of all Touhou games. Although I also played the new games as soon as they are released, I do not think they are better than those before, so gradually I stopped playing Touhou anymore...",
+            "ifs2l0l0p2": "My favorite Touhou character is Remilia Scarlet, and that's where my name Remisiki came from. Vampire is good!",
+            "ifs2l0l1p0": "Started playing CAVE games since 2019. At first, I could only play them on PC simulators with keyboard; Then in 2020 I bought a joystick controller so that I could practice CAVE at home, which helped me a lot when I actually go to Rekka Game Center in Shanghai to play on real arcade machines.",
+            "ifs2l0l1p1": "Favorite CAVE game is Dodonpachi Daioujou, and favorite music is 『Stage 5: EVAC INDUSTRY-審判の日』. I do not own a PS4/Xbox 360, so I can only buy a few of CAVE games at present, sadly; Hope that more CAVE games can be tranplanted to Steam in recent years.",
+            "ifs2l1l0p0": "Hollow Knight is my first Metroroidvania game. I started playing it since late 2019 (expecting Silksong to be released soon), and have spent around 1,000 hours on it until now. Hollow Knight is a wonderful game with plentiful contents and excellent operation experience; Later I mainly ran on Randomizer MOD and Any% Speedrun, but now I have decided to stop playing it until Silksong is released (hope it will).",
+            "ifs2l1l1p0": "Ender Lilies is my second favorite Metroroidvania game. I first played it's early access on 2021 and liked it quite much. The story is excellent but too short... I would be very satisfied if the game had been developed into a bigger one so that I could spend more time in it. Currently I run Randomizer MOD and 100% Map Speedrun for Ender Lilies.",
+            "ifs2l1l1p1": "It seems that not so many Metroroidvania players know about Ender Lilies, and I think it should receive more attentions than now.",
+            "ifs2l1l2p0": "Just started playing Ori 1, and currently stopping for perhaps several months. I think it is more difficult than Hollow Knight or Ender Lilies, and some new moving skills are quite cool. Yes, a hard game.",
+            "ifs2l2l0p0": "Steins;Gate is one of the best game I've ever played. Already spent 50 hours on it, but still far from all achievements. I think it is quite hard to reach the true ending without viewing strategy guides, and the saving slots are not enough to do it all on one's own though.",
+            "ifs2l2l0p1": "Favorite character is Faris NyanNyan, cried a lot when sacrificing her to reach other ends :( Besides, music is very good and I can recall all of them clearly; I even set 『GATE OF STINER -Piano-』 as my ringtone!",
+            "ifs2l2l1p0": "Steins;Gate 0 can be seen as a sequel or Part 0 of Steins;Gate. But I think they should be combined together to construct a complete story, since Steins;Gate 0 is necessary to reach Steins;Gate.",
+            "ifs2l2l1p1": "As a game itself, I think Steins;Gate 0 is really wonderful and does not lose to Steins;Gate. The true ending route is more interesting and strongly connected to other routes, so all routes are important to understand the whole story.",
+            "ifs2l2l1p2": "The music is undoubtedly excellent, sometimes rearranging with Steins;Gate. Waiting for so long before the Reawake appears though."
         }
     },
     "en": {
@@ -106,6 +121,7 @@
             "todo10": "Watch とらドラ.",
             "todo11": "Watch まちかどまぞく.",
             "todo12": "Watch となりの吸血鬼さん.",
+            "todo13": "Build Android app with Java/Kotlin.",
             "complete": "Completed",
             "progress": "In progress",
             "pend": "Pending",
@@ -164,7 +180,21 @@
             "ifs2l3": "Anime",
             "ifs2l3l0": "Steins;Gate",
             "ifs2l3l1": "Psychopass",
-            "ifs2l3l2": "Monogatari"
+            "ifs2l3l2": "Monogatari",
+            "ifs2l0l0p0": "Started playing Touhou since 2016, and (almost) stopped after 2019. For details of achievements, see the Game tab.",
+            "ifs2l0l0p1": "Favorite Touhou game is TH12 東方星蓮船 ～ Undefined Fantastic Object; Others like TH06 東方紅魔郷 ～ the Embodiment of Scarlet Devil, TH11 東方地霊殿 〜 Subterranean Animism are also excellent. I bought both CD and Steam version for these three games, and I think their game content and music are among the best of all Touhou games. Although I also played the new games as soon as they are released, I do not think they are better than those before, so gradually I stopped playing Touhou anymore...",
+            "ifs2l0l0p2": "My favorite Touhou character is Remilia Scarlet, and that's where my name Remisiki came from. Vampire is good!",
+            "ifs2l0l1p0": "Started playing CAVE games since 2019. At first, I could only play them on PC simulators with keyboard; Then in 2020 I bought a joystick controller so that I could practice CAVE at home, which helped me a lot when I actually go to Rekka Game Center in Shanghai to play on real arcade machines.",
+            "ifs2l0l1p1": "Favorite CAVE game is Dodonpachi Daioujou, and favorite music is 『Stage 5: EVAC INDUSTRY-審判の日』. I do not own a PS4/Xbox 360, so I can only buy a few of CAVE games at present, sadly; Hope that more CAVE games can be tranplanted to Steam in recent years.",
+            "ifs2l1l0p0": "Hollow Knight is my first Metroroidvania game. I started playing it since late 2019 (expecting Silksong to be released soon), and have spent around 1,000 hours on it until now. Hollow Knight is a wonderful game with plentiful contents and excellent operation experience; Later I mainly ran on Randomizer MOD and Any% Speedrun, but now I have decided to stop playing it until Silksong is released (hope it will).",
+            "ifs2l1l1p0": "Ender Lilies is my second favorite Metroroidvania game. I first played it's early access on 2021 and liked it quite much. The story is excellent but too short... I would be very satisfied if the game had been developed into a bigger one so that I could spend more time in it. Currently I run Randomizer MOD and 100% Map Speedrun for Ender Lilies.",
+            "ifs2l1l1p1": "It seems that not so many Metroroidvania players know about Ender Lilies, and I think it should receive more attentions than now.",
+            "ifs2l1l2p0": "Just started playing Ori 1, and currently stopping for perhaps several months. I think it is more difficult than Hollow Knight or Ender Lilies, and some new moving skills are quite cool. Yes, a hard game.",
+            "ifs2l2l0p0": "Steins;Gate is one of the best game I've ever played. Already spent 50 hours on it, but still far from all achievements. I think it is quite hard to reach the true ending without viewing strategy guides, and the saving slots are not enough to do it all on one's own though.",
+            "ifs2l2l0p1": "Favorite character is Faris NyanNyan, cried a lot when sacrificing her to reach other ends :( Besides, music is very good and I can recall all of them clearly; I even set 『GATE OF STINER -Piano-』 as my ringtone!",
+            "ifs2l2l1p0": "Steins;Gate 0 can be seen as a sequel or Part 0 of Steins;Gate. But I think they should be combined together to construct a complete story, since Steins;Gate 0 is necessary to reach Steins;Gate.",
+            "ifs2l2l1p1": "As a game itself, I think Steins;Gate 0 is really wonderful and does not lose to Steins;Gate. The true ending route is more interesting and strongly connected to other routes, so all routes are important to understand the whole story.",
+            "ifs2l2l1p2": "The music is undoubtedly excellent, sometimes rearranging with Steins;Gate. Waiting for so long before the Reawake appears though."
         }
     },
     "zh": {
@@ -190,6 +220,7 @@
             "todo10": "Watch とらドラ.",
             "todo11": "Watch まちかどまぞく.",
             "todo12": "Watch となりの吸血鬼さん.",
+            "todo13": "Build Android app with Java/Kotlin.",
             "complete": "Completed",
             "progress": "In progress",
             "pend": "Pending",
@@ -248,7 +279,21 @@
             "ifs2l3": "Anime",
             "ifs2l3l0": "Steins;Gate",
             "ifs2l3l1": "Psychopass",
-            "ifs2l3l2": "Monogatari"
+            "ifs2l3l2": "Monogatari",
+            "ifs2l0l0p0": "Started playing Touhou since 2016, and (almost) stopped after 2019. For details of achievements, see the Game tab.",
+            "ifs2l0l0p1": "Favorite Touhou game is TH12 東方星蓮船 ～ Undefined Fantastic Object; Others like TH06 東方紅魔郷 ～ the Embodiment of Scarlet Devil, TH11 東方地霊殿 〜 Subterranean Animism are also excellent. I bought both CD and Steam version for these three games, and I think their game content and music are among the best of all Touhou games. Although I also played the new games as soon as they are released, I do not think they are better than those before, so gradually I stopped playing Touhou anymore...",
+            "ifs2l0l0p2": "My favorite Touhou character is Remilia Scarlet, and that's where my name Remisiki came from. Vampire is good!",
+            "ifs2l0l1p0": "Started playing CAVE games since 2019. At first, I could only play them on PC simulators with keyboard; Then in 2020 I bought a joystick controller so that I could practice CAVE at home, which helped me a lot when I actually go to Rekka Game Center in Shanghai to play on real arcade machines.",
+            "ifs2l0l1p1": "Favorite CAVE game is Dodonpachi Daioujou, and favorite music is 『Stage 5: EVAC INDUSTRY-審判の日』. I do not own a PS4/Xbox 360, so I can only buy a few of CAVE games at present, sadly; Hope that more CAVE games can be tranplanted to Steam in recent years.",
+            "ifs2l1l0p0": "Hollow Knight is my first Metroroidvania game. I started playing it since late 2019 (expecting Silksong to be released soon), and have spent around 1,000 hours on it until now. Hollow Knight is a wonderful game with plentiful contents and excellent operation experience; Later I mainly ran on Randomizer MOD and Any% Speedrun, but now I have decided to stop playing it until Silksong is released (hope it will).",
+            "ifs2l1l1p0": "Ender Lilies is my second favorite Metroroidvania game. I first played it's early access on 2021 and liked it quite much. The story is excellent but too short... I would be very satisfied if the game had been developed into a bigger one so that I could spend more time in it. Currently I run Randomizer MOD and 100% Map Speedrun for Ender Lilies.",
+            "ifs2l1l1p1": "It seems that not so many Metroroidvania players know about Ender Lilies, and I think it should receive more attentions than now.",
+            "ifs2l1l2p0": "Just started playing Ori 1, and currently stopping for perhaps several months. I think it is more difficult than Hollow Knight or Ender Lilies, and some new moving skills are quite cool. Yes, a hard game.",
+            "ifs2l2l0p0": "Steins;Gate is one of the best game I've ever played. Already spent 50 hours on it, but still far from all achievements. I think it is quite hard to reach the true ending without viewing strategy guides, and the saving slots are not enough to do it all on one's own though.",
+            "ifs2l2l0p1": "Favorite character is Faris NyanNyan, cried a lot when sacrificing her to reach other ends :( Besides, music is very good and I can recall all of them clearly; I even set 『GATE OF STINER -Piano-』 as my ringtone!",
+            "ifs2l2l1p0": "Steins;Gate 0 can be seen as a sequel or Part 0 of Steins;Gate. But I think they should be combined together to construct a complete story, since Steins;Gate 0 is necessary to reach Steins;Gate.",
+            "ifs2l2l1p1": "As a game itself, I think Steins;Gate 0 is really wonderful and does not lose to Steins;Gate. The true ending route is more interesting and strongly connected to other routes, so all routes are important to understand the whole story.",
+            "ifs2l2l1p2": "The music is undoubtedly excellent, sometimes rearranging with Steins;Gate. Waiting for so long before the Reawake appears though."
         }
     }
 }

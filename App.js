@@ -54,7 +54,7 @@ function App() {
       <section id="top">
         <NavigationBlock />
       </section>
-      <Stack.Navigator initialRouteName="Home" >
+      <Stack.Navigator initialRouteName="Info" >
         <Stack.Group
           screenOptions={{ headerShown: false }}
         >

@@ -84,7 +84,7 @@ const drawChart = (element, data) => {
       }
       else return ``;
     })
-    .style("fill", "#333")
+    .style("fill", "#eee")
     .attr("transform", (d) => {
       let [x, y] = arcGenerator.centroid(d);
       x *= 1.6;

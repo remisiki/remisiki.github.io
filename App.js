@@ -51,10 +51,10 @@ function App() {
   return (
     // <NavigationContainer theme={DefaultTheme}>
     <NavigationContainer theme={MyTheme}>
-      <section id="top">
+      <header>
         <NavigationBlock />
-      </section>
-      <Stack.Navigator initialRouteName="Info" >
+      </header>
+      <Stack.Navigator initialRouteName="Home" >
         <Stack.Group
           screenOptions={{ headerShown: false }}
         >

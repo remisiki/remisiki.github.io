@@ -7,7 +7,7 @@ function SideNavi(name) {
 		<li key={name}>
 			<a href={"#" + name} id={name + "Navi"}>
 				<span>
-					{name}
+					{name.replace("-", " ")}
 				</span>
 			</a>
 		</li>

@@ -387,25 +387,10 @@ body {
     top: 120px;
     left: 50px;
     padding: 10px;
-    border-radius: 30px 15px;
-    border: solid;
-    border-color: #2083e0;
-    border-width: 3px;
-    background-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 0 10px rgba(0,0,0,0.6);
-    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.6);
-    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);
-    transition: box-shadow 0.1s ease-in-out, -moz-box-shadobox-shadow 0.1s ease-in-out, -webkit-box-shadow 0.1s ease-in-out;
 }
 
 .wrapper aside ul {
     margin: 2px 0 30px;
-}
-
-.wrapper aside:hover {
-    box-shadow: 0 0 20px rgba(0,0,0,0.6);
-    -moz-box-shadow: 0 0 20px rgba(0,0,0,0.6);
-    -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.6);
 }
 
 .wrapper aside ul a {
@@ -419,7 +404,7 @@ body {
 
 .wrapper aside ul a:hover {
     /*border-color: #2083e0;*/
-    font-size: 24px;
+    /*font-size: 24px;*/
 }
 
 .wrapper aside h3 {
@@ -452,13 +437,13 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 50px;
+    height: 63px;
     line-height: 50px;
     padding: 30px 0;
-    background: #fff;
-    background: rgba(255, 255, 255, 0.95);
+    background: #375899;
     border-bottom: 1px solid #ccc;
-    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+    padding: 0;
+    z-index: 1;
 }
 
 header #logo {
@@ -515,15 +500,9 @@ header nav a.download:active {
 }
 
 #top {
-    background: url(./header-pattern-1.png) fixed;
-    box-shadow: 0 -3px 0 rgba(0, 0, 0, 0.2) inset;
-    padding: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 63px;
-    z-index: 1;
+    /*background: url(./header-pattern-1.png) fixed;*/
+    /*box-shadow: 0 -3px 0 rgba(0, 0, 0, 0.2) inset;*/
+    
 }
 
 #top .wrapper {
@@ -802,29 +781,27 @@ aside a[href^="http"]:after,.doc a[href^="http"]:after {
 }
 
 body {
-    background-image: url(./background.webp);
-    /*background-repeat: repeat-x;*/
+    /*background-image: url(./background.webp);
+    background-repeat: repeat-x;
     background-attachment: fixed;
-    background-size: contain;
+    background-size: contain;*/
+    background: #708090;
 }
 
-.wrapper article, .twitter-tl, .cell {
-    border-radius: 15px;
-    border: solid;
-    border-color: #2083e0;
-    border-width: 3px;
-    background-color: rgba(255, 255, 255, 0.7);
+.wrapper article, .twitter-tl, .cell, .wrapper aside {
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.6);
-    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.6);
-    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);
-    transition: box-shadow 0.1s ease-in-out, -moz-box-shadobox-shadow 0.1s ease-in-out, -webkit-box-shadow 0.1s ease-in-out;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+    -moz-box-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+    transition: all 0.2s ease-in-out;
 }
 
-.wrapper article:hover, .twitter-tl:hover, .cell:hover {
-    box-shadow: 0 0 20px rgba(0,0,0,0.6);
-    -moz-box-shadow: 0 0 20px rgba(0,0,0,0.6);
-    -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.6);
+.wrapper article:hover, .twitter-tl:hover, .cell:hover, .wrapper aside:hover {
+    box-shadow: 2px 2px 20px rgba(0,0,0,0.6);
+    -moz-box-shadow: 2px 2px 20px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 2px 2px 20px rgba(0,0,0,0.6);
 }
 
 .gap {
@@ -917,7 +894,7 @@ html {
     padding: 10px ;
     border-radius: 10px;
     width: 30px;
-    top: 15px;
+    top: 10px;
 }
 
 .wrapper .title-center:hover, .title-right:hover {
@@ -990,6 +967,7 @@ html {
     position: fixed;
     left: 70px;
     top: 50%;
+    color: #eee;
 }
 
 .cell {
@@ -1006,9 +984,9 @@ html {
 
 .cell:hover {
     transform-origin: center;
-    transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
+    transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
     cursor: pointer;
 }
 
@@ -1182,6 +1160,11 @@ html {
 .fold {
     user-select: none;
     cursor: pointer;
+}
+
+.border-text {
+    text-stroke: 1px #333;
+    -webkit-text-stroke: 0.2px #eee;
 }
 
 @media only screen and (max-width: 425px) {

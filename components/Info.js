@@ -300,6 +300,8 @@ function InfoScreen({route, navigation}) {
                   <li>
                     <Folder name={t("ifs2l2l2")} id="ifoghtr" />
                     <div className="fold-block" id="ifoghtr">
+                      <p>{t("ifs2l2l2p0")}</p>
+                      <p>{t("ifs2l2l2p1")}</p>
                     </div>
                   </li>
                 </ul>
@@ -312,16 +314,21 @@ function InfoScreen({route, navigation}) {
                   <li>
                     <Folder name={t("ifs2l3l0")} id="ifanmsg" />
                     <div className="fold-block" id="ifanmsg">
+                      <p>{t("ifs2l3l0p0")}</p>
+                      <p>{t("ifs2l3l0p1")}</p>
+                      <p>{t("ifs2l3l0p2")}</p>
                     </div>
                   </li>
                   <li>
                     <Folder name={t("ifs2l3l1")} id="ifanmpsy" />
                     <div className="fold-block" id="ifanmpsy">
+                      <p>{t("ifs2l3l1p0")}</p>
                     </div>
                   </li>
                   <li>
                     <Folder name={t("ifs2l3l2")} id="ifanmmg" />
                     <div className="fold-block" id="ifanmmg">
+                      <p>{t("ifs2l3l2p0")}</p>
                     </div>
                   </li>
                 </ul>

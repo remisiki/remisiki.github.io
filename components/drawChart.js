@@ -18,15 +18,10 @@ const drawChart = (element, data) => {
     .attr("preserveAspectRatio", "xMidYMid meet")
     .attr("height", "300px")
     .attr("width", "300px")
+    .attr("id", "lang-graph")
     .attr("viewBox", `0 0 ${boxSize} ${boxSize}`)
     .append("g")
     .attr("transform", `translate(${boxSize / 2}, ${boxSize / 2})`);
-
-  $('svg').css({
-    position: 'fixed',
-    top: '120px',
-    left: '20px',
-  })
 
   var defs = svg.append("defs");
   var filter = defs.append("filter")

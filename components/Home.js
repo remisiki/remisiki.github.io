@@ -107,7 +107,7 @@ function HomeScreen({route, navigation}) {
             <ToDoList num={15} status={todo_status} />
           </ul>
         </article>
-        <SideBar sections={sections} />
+        <SideBar sections={sections} name="home" />
         <div className="gap"></div>
         
       </div>

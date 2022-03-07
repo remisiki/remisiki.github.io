@@ -30,6 +30,7 @@ const Stack = createNativeStackNavigator();
 
 window.onload = function() {
   $('#Home').addClass("title-selected");
+  $('#menuHome').addClass("menu-item-selected");
   switch ($('#Home').text()) {
     case "Home":
       $('#en').addClass("title-selected");
@@ -76,7 +77,7 @@ function App() {
           />
         </Stack.Group>
       </Stack.Navigator>
-      <a href="#">
+      <a onClick={() => $('html, body').animate({ scrollTop: 0 }, 'fast')} style={{cursor: "pointer"}}>
         <img src={totop} className="totop" />
       </a>
     </NavigationContainer>

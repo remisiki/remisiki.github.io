@@ -337,7 +337,7 @@ function InfoScreen({route, navigation}) {
           </ul>
         </article>
         
-        <SideBar sections={sections} />
+        <SideBar sections={sections} tool={true} name="info" />
         <div className="gap"></div>
       </div>
     </div>

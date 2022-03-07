@@ -1,12 +1,121 @@
+import React, { useState, useEffect } from 'react';
 import TwitterTimeLine from './Twitter';
 import SideBar from './SideBar';
 import { scrollWith } from './scroll';
 import { useTranslation } from 'react-i18next';
 import YoutubePlayer from "react-native-youtube-iframe";
+import { Img, ViewSource, Description } from './Gallery';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import $ from 'jquery';
+import photos from './photo_wall.json';
+
+function LeftRightSet({style, leftPosition, rightPosition, leftClickHandler, rightClickHandler, text = ""}) {
+  const arrow = require("../assets/fold.png");
+  return (
+    <div style={style}>
+      <div 
+        className="arrow" 
+        style={{
+          position: "absolute", 
+          left: leftPosition,
+          top: 0
+        }}
+        onClick={(e) => {
+          leftClickHandler();
+          e.stopPropagation();
+        }}
+      >
+        <img 
+          src={arrow} 
+          style={{
+            transform: "rotateZ(-90deg)",
+            width: 40,
+            height: 40,
+            filter: "brightness(0) invert(1)"
+          }} 
+        />
+      </div>
+      {text}
+      <div 
+        className="arrow" 
+        style={{
+          position: "absolute", 
+          right: rightPosition,
+          top: 0
+        }}
+        onClick={(e) => {
+          rightClickHandler();
+          e.stopPropagation();
+        }}
+      >
+        <img 
+          src={arrow} 
+          style={{
+            transform: "rotateZ(90deg)",
+            width: 40,
+            height: 40,
+            filter: "brightness(0) invert(1)"
+          }} 
+        />
+      </div>
+    </div>
+  );
+}
+
+function KeyMapper({leftClickHandler, rightClickHandler, escapeHandler}) {
+  function handleKeyDown(event) {
+    event.preventDefault();
+    switch (event.key) {
+      case "ArrowLeft":
+      case "ArrowUp":
+      case "PageUp":
+        leftClickHandler();
+        break;
+      case "ArrowRight":
+      case "ArrowDown":
+      case "PageDown":
+        rightClickHandler();
+        break;
+      default:
+        escapeHandler();
+        break;
+    }
+  }
+  useEffect(() => {
+    $('#keymap').focus();
+  }, []);
+  return (
+    <div tabIndex={0} onKeyDown={(e) => handleKeyDown(e)} id="keymap"></div>
+  );
+}
 
 function GameScreen({route, navigation}) {
   const { t, i18n } = useTranslation();
   const sections = ["Touhou", "CAVE", "Hollow-Knight"];
+  const length = photos.length;
+  const arrow = require("../assets/fold.png");
+  let [state, setState] = useState('out');
+  let [photo_index, setPhotoIndex] = useState(0);
+  const stateHandler = (state) => {
+    setState(state);
+  }
+  const leftClickHandler = () => {
+    setPhotoIndex((photo_index - 1 + length) % length);
+  }
+  const rightClickHandler = () => {
+    setPhotoIndex((photo_index + 1) % length);
+  }
+  const wheelHandler = (e) => {
+    // TODO
+    // e.preventDefault();
+    if (e.deltaY > 0) {
+      rightClickHandler();
+    }
+    else if (e.deltaY < 0) {
+      leftClickHandler();
+    }
+  }
   scrollWith(sections);
   return (
     <div>
@@ -176,6 +285,64 @@ function GameScreen({route, navigation}) {
         <SideBar sections={sections} name="repos" />
         <div className="gap"></div>
       </div>
+      <div className="photo_container">
+        <LeftRightSet 
+          style={{
+            "marginBottom": 10, 
+            "textAlign": "center",
+            "color": "#eee",
+            "fontWeight": "bold",
+            "fontSize": 26
+          }}
+          leftPosition={10}
+          rightPosition={10}
+          leftClickHandler={() => leftClickHandler()}
+          rightClickHandler={() => rightClickHandler()}
+          text="Gallery"
+        />
+        <Img 
+          src={require(`../assets/${photos.at(photo_index).thumb}.webp`)} 
+          key={`photo${photo_index}`} 
+          handler={stateHandler} 
+          index={photo_index} 
+        />
+        <div 
+          style={{
+            "textAlign": "center",
+            "color": "#eee",
+            "fontSize": 20
+          }}>
+          {photo_index + 1}/{length}
+        </div>
+      </div>
+      {state !== 'out' && 
+        <div onClick={() => setState('out')} className="photo_zoom_container" onWheel={(e) => wheelHandler(e)}>
+          <LazyLoadImage 
+            src={require(`../assets/${photos.at(photo_index).thumb}.webp`)} 
+            className="photo_zoom" 
+            effect="blur" 
+          />
+          <ViewSource src={photos.at(photo_index).src} />
+          <Description info={t(`des${photo_index}`)} date={photos.at(photo_index).date} />
+          <KeyMapper 
+            leftClickHandler={() => leftClickHandler()} 
+            rightClickHandler={() => rightClickHandler()}
+            escapeHandler={() => setState('out')}
+          />
+          <LeftRightSet 
+            style={{
+              "position": "absolute",
+              "bottom": 40, 
+              "height": 40,
+              "width": "100vw"
+            }}
+            leftPosition="30vw"
+            rightPosition="30vw"
+            leftClickHandler={() => leftClickHandler()}
+            rightClickHandler={() => rightClickHandler()}
+          />
+        </div>
+      }
     </div>
   );
 }

@@ -29,7 +29,7 @@ function ToolBar() {
 
 function foldSideBar(id) {
 	$(`#sidecontent-${id}`).toggle();
-	$(`#foldpng-${id}`).toggleClass('reverse-x');
+	$(`#foldpng-${id}`).toggleClass('reverse-z');
 	$(`#sidebar-${id}`).toggleClass('small-aside');
 }
 
@@ -50,11 +50,13 @@ function SideBar({sections, tool = false, name}) {
 	}, [sections]);
 	return (
 		<aside className="sidebar" id={`sidebar-${name}`}>
-	        <div onClick={() => foldSideBar(name)}>
-	          <div>
-		          <img src={fold} id={`foldpng-${name}`} className="foldpng" />
-	          </div>
-	        </div>
+			{mobile_view &&
+		        <div onClick={() => foldSideBar(name)}>
+		          <div>
+			          <img src={fold} id={`foldpng-${name}`} className="foldpng" />
+		          </div>
+		        </div>
+		    }
 	        <div id={`sidecontent-${name}`}>
 		        <h3>
 		            <span lang="en">Contents</span>

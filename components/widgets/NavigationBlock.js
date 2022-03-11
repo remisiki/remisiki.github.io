@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigation } from '@react-navigation/native';
 import $ from 'jquery';
 import { useTranslation } from 'react-i18next';
-import './i18n';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
 

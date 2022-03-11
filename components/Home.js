@@ -1,12 +1,14 @@
-import TwitterTimeLine from './Twitter';
-import SideBar from './SideBar';
+import SideBar from './widgets/SideBar';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { scrollWith } from './scroll';
+import { scrollWith } from './control/scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import brands from '@fortawesome/fontawesome-free-brands';
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from 'react-i18next';
-import { Footer } from './Footer';
+import {
+  TwitterTimeLine,
+  Footer,
+} from './widgets';
 
 function ToDoList({num, status}) {
   let list = [];

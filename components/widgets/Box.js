@@ -1,4 +1,4 @@
-import cmap from './cmap.json';
+import cmap from '../config/cmap.json';
 
 function encode(str) {
   if (str) {

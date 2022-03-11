@@ -1,4 +1,3 @@
-import style from '../assets/index.css';
 import { useNavigation } from '@react-navigation/native';
 import $ from 'jquery';
 import { useEffect } from 'react';
@@ -35,7 +34,7 @@ function foldSideBar(id) {
 
 function SideBar({sections, tool = false, name}) {
 	const navigation = useNavigation();
-	const fold = require("../assets/fold.png");
+	const fold = require("../../assets/fold.png");
 	const screen_width = window.innerWidth;
 	const mobile_view = (screen_width < 425);
 	var navis = [];

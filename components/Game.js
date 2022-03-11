@@ -1,95 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import TwitterTimeLine from './Twitter';
-import SideBar from './SideBar';
-import { scrollWith } from './scroll';
+import { scrollWith } from './control/scroll';
 import { useTranslation } from 'react-i18next';
 import YoutubePlayer from "react-native-youtube-iframe";
-import { Img, ViewSource, Description } from './Gallery';
+import { Img, ViewSource, Description } from './widgets/Gallery';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import $ from 'jquery';
-import photos from './photo_wall.json';
-import { Footer } from './Footer';
-
-function LeftRightSet({style, leftPosition, rightPosition, leftClickHandler, rightClickHandler, text = ""}) {
-  const arrow = require("../assets/fold.png");
-  return (
-    <div style={style}>
-      <div 
-        className="arrow" 
-        style={{
-          position: "absolute", 
-          left: leftPosition,
-          top: 0
-        }}
-        onClick={(e) => {
-          leftClickHandler();
-          e.stopPropagation();
-        }}
-      >
-        <img 
-          src={arrow} 
-          style={{
-            transform: "rotateZ(-90deg)",
-            width: 40,
-            height: 40,
-            filter: "brightness(0) invert(1)"
-          }} 
-        />
-      </div>
-      {text}
-      <div 
-        className="arrow" 
-        style={{
-          position: "absolute", 
-          right: rightPosition,
-          top: 0
-        }}
-        onClick={(e) => {
-          rightClickHandler();
-          e.stopPropagation();
-        }}
-      >
-        <img 
-          src={arrow} 
-          style={{
-            transform: "rotateZ(90deg)",
-            width: 40,
-            height: 40,
-            filter: "brightness(0) invert(1)"
-          }} 
-        />
-      </div>
-    </div>
-  );
-}
-
-function KeyMapper({leftClickHandler, rightClickHandler, escapeHandler}) {
-  function handleKeyDown(event) {
-    event.preventDefault();
-    switch (event.key) {
-      case "ArrowLeft":
-      case "ArrowUp":
-      case "PageUp":
-        leftClickHandler();
-        break;
-      case "ArrowRight":
-      case "ArrowDown":
-      case "PageDown":
-        rightClickHandler();
-        break;
-      default:
-        escapeHandler();
-        break;
-    }
-  }
-  useEffect(() => {
-    $('#keymap').focus();
-  }, []);
-  return (
-    <div tabIndex={0} onKeyDown={(e) => handleKeyDown(e)} id="keymap"></div>
-  );
-}
+import photos from './config/photo_wall.json';
+import { KeyMapper } from './control/keyboard';
+import {
+  TwitterTimeLine,
+  SideBar,
+  Footer,
+  LeftRightSet,
+} from './widgets';
 
 function GameScreen({route, navigation, darkModeHandler, theme}) {
   const { t, i18n } = useTranslation();

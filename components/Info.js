@@ -1,33 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import style from '../assets/index.css';
-import SideBar from './SideBar';
-import ReactCountryFlag from "react-country-flag"
-import { scrollWith } from './scroll';
+import { scrollWith } from './control/scroll';
 import $ from 'jquery';
 import { useTranslation } from 'react-i18next';
-import { Footer } from './Footer';
-
-function Flag({code}) {
-  return (
-    <ReactCountryFlag countryCode={code} svg 
-      style={{
-        marginLeft: '5px',
-      }}
-    />
-  );
-}
-
-function unfold(id) {
-  $(`#${id}`).toggle();
-}
-
-function Folder({name, id}) {
-  return (
-    <a onClick={() => unfold(id)} className="fold">
-      {name}
-    </a>
-  );
-}
+import {
+  SideBar,
+  Footer,
+  Flag,
+  Folder,
+} from './widgets';
 
 function InfoScreen({route, navigation, darkModeHandler}) {
   $('a[href^=http]').attr("target", "_blank");

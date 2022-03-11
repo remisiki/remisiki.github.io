@@ -1,6 +1,6 @@
 import * as d3 from "d3";
 import $ from 'jquery';
-import cmap from './cmap.json';
+import cmap from '../config/cmap.json';
 
 const drawChart = (element, data) => {
   let colors = data.map((x) => (cmap[x.key] || ({"C": {

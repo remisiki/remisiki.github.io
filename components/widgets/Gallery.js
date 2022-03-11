@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import $ from 'jquery';
-import { get } from './request';
+import { get } from '../http/request';
 
 function Img({src, handler, index}) {
   return (
@@ -32,4 +32,4 @@ function Description({date, info}) {
   );
 }
 
-export { Img, ViewSource, Description};
+export { Img, ViewSource, Description };

@@ -4,6 +4,7 @@ import ReactCountryFlag from "react-country-flag"
 import { scrollWith } from './scroll';
 import $ from 'jquery';
 import { useTranslation } from 'react-i18next';
+import { Footer } from './Footer';
 
 function Flag({code}) {
   return (
@@ -340,6 +341,7 @@ function InfoScreen({route, navigation}) {
         <SideBar sections={sections} tool={true} name="info" />
         <div className="gap"></div>
       </div>
+      <Footer />
     </div>
   );
 }

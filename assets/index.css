@@ -548,11 +548,15 @@ header nav a.download:active {
 
 footer {
     padding: 40px 0;
-    background: #363736;
-    background: #eee;
+    background-color: #1b2c4c;
     border-top: 1px solid #e5e5e5;
     color: #aaa;
     position: relative;
+}
+
+footer span {
+    position: relative;
+    left: 50px;
 }
 
 footer .logo {

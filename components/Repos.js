@@ -7,6 +7,7 @@ import List from './List';
 import { scrollWith } from './scroll';
 import Box from './Box';
 import $ from 'jquery';
+import { Footer } from './Footer';
 
 async function mostUsedLanguage() {
   let content = await get("https://api.github.com/users/remisiki/repos");
@@ -95,6 +96,7 @@ function ReposScreen({route, navigation}) {
         </div>
         <div className="gap"></div>
       </div>
+      <Footer />
     </div>
   );
 }

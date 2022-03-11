@@ -5,6 +5,7 @@ import { scrollWith } from './scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import brands from '@fortawesome/fontawesome-free-brands';
 import { useTranslation } from 'react-i18next';
+import { Footer } from './Footer';
 
 function ToDoList({num, status}) {
   let list = [];
@@ -111,7 +112,7 @@ function HomeScreen({route, navigation}) {
         <div className="gap"></div>
         
       </div>
-      {/*<footer>Foot</footer>*/}
+      <Footer />
 
     </div>
   );

@@ -9,6 +9,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import $ from 'jquery';
 import photos from './photo_wall.json';
+import { Footer } from './Footer';
 
 function LeftRightSet({style, leftPosition, rightPosition, leftClickHandler, rightClickHandler, text = ""}) {
   const arrow = require("../assets/fold.png");
@@ -343,6 +344,7 @@ function GameScreen({route, navigation}) {
           />
         </div>
       }
+      <Footer />
     </div>
   );
 }

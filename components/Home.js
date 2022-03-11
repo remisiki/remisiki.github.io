@@ -4,6 +4,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { scrollWith } from './scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import brands from '@fortawesome/fontawesome-free-brands';
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from 'react-i18next';
 import { Footer } from './Footer';
 
@@ -25,7 +26,7 @@ function ToDoList({num, status}) {
   );
 }
 
-function HomeScreen({route, navigation}) {
+function HomeScreen({route, navigation, theme}) {
   const avatar = require("../assets/avatar.jpg");
   const sections = ["Welcome", "Accounts", "ToDo-List"];
   const todo_status = ["progress", "pend", "progress", "complete", "pend", "pend", "pend", "pend", "pend", "stop", "pend", "progress", "pend", "pend", "progress"];
@@ -34,7 +35,7 @@ function HomeScreen({route, navigation}) {
   return (
     <div>
       <div className="twitter-tl" id="twitter-tl" >
-        <TwitterTimeLine name="remisiki" />
+        <TwitterTimeLine name="remisiki" theme={theme} />
       </div>
 
       <div id="content" className="wrapper doc">
@@ -60,38 +61,43 @@ function HomeScreen({route, navigation}) {
           </h1>
           <p>
             <FontAwesomeIcon icon="fa-brands fa-twitter" />
-            {'  '}Twitter for study:{'  '}
+            &ensp;Twitter (study):&ensp;
             <a href="https://twitter.com/remisiki">@remisiki</a>
           </p>
           <p>
             <FontAwesomeIcon icon="fa-brands fa-github" />
-            {'  '}Github:{'  '}
+            &ensp;Github:&ensp;
             <a href="https://github.com/remisiki">Remisiki</a>
           </p>
           <p>
             <FontAwesomeIcon icon="fa-brands fa-telegram" />
-            {'  '}Telegram:{'  '}
+            &ensp;Telegram:&ensp;
             <a href="https://t.me/remisiki">@remisiki</a>
           </p>
           <p>
             <FontAwesomeIcon icon="fa-brands fa-twitter" />
-            {'  '}Twitter for game:{'  '}
+            &ensp;Twitter (game):&ensp;
             <a href="https://twitter.com/mukei_stg">@mukei_stg</a>
           </p>
           <p>
             <FontAwesomeIcon icon="fa-brands fa-discord" />
-            {'  '}Discord:{'  '}
+            &ensp;Discord:&ensp;
             <a href="https://discordapp.com/users/422313209937002507">むけい#6131</a>
           </p>
           <p>
             <FontAwesomeIcon icon="fa-brands fa-steam" />
-            {'  '}Steam:{'  '}
+            &ensp;Steam:&ensp;
             <a href="https://steamcommunity.com/profiles/76561198843774402">むけい</a>
           </p>
           <p>
             <FontAwesomeIcon icon="fa-brands fa-youtube" />
-            {'  '}YouTube:{'  '}
+            &ensp;YouTube:&ensp;
             <a href="https://www.youtube.com/channel/UC4mJDWoAdQBa-FUx_FXoiQw">れみしき</a>
+          </p>
+          <p>
+            <FontAwesomeIcon icon={faEnvelope} />
+            &ensp;Mail:&ensp;
+            <a href="mailto:yangyiwen.sigo@hotmail.com">Hotmail</a>
           </p>
           <p>
             I use Twitter and Telegram quite often for private messages. <span className="yellow-marker-thin">Be careful that there may be not-safe-for-work retweets in my Twitter for game account!</span> Details of my Github repositories may be found in Repos tab. Feel free to add me on Steam, Discord and visit my Youtube channel to discover my gaming process!

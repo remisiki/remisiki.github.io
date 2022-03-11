@@ -792,6 +792,16 @@ body {
     background-attachment: fixed;
     background-size: contain;*/
     background: #708090;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dark-body {
+    background-color: #22272e!important;
+}
+
+.dark-content {
+    background-color: rgba(48, 56, 65, 1.0)!important;
+    color: #eee!important;
 }
 
 .wrapper article, .twitter-tl, .cell, .wrapper aside {
@@ -856,6 +866,11 @@ html {
 
 .yellow-marker-thin{
     background: linear-gradient(transparent 60%, #ff9 60%);
+}
+
+.yellow-marker-thin-dark {
+    /*background: linear-gradient(transparent 60%, rgba(255, 255, 153, 0.4) 60%);*/
+    background: linear-gradient(transparent 60%, rgba(13, 225, 189, 0.4) 60%);
 }
 
 .red-marker-thin{
@@ -1237,6 +1252,17 @@ html {
 
 .menu-btn-selected {
     background-color: #172d57;
+}
+
+.moon {
+    margin-left: -15px;
+    margin-top: -25px;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 0 0 #d0d5d2;
+  
 }
 
 #lang-graph {

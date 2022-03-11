@@ -70,13 +70,16 @@ function Project({name, description, href, thumb, lang}) {
   );
 }
 
-function ReposScreen({route, navigation}) {
+function ReposScreen({route, navigation, darkModeHandler}) {
   $('a[href^=http]').attr("target", "_blank");
   let [lists, setLists] = useState(false);
   useEffect(async () => {
     lists = await mostUsedLanguage();
     setLists(lists);
   },[])
+  useEffect(() => {
+    darkModeHandler();
+  }, []);
   scrollWith([]);
   return (
     <div>

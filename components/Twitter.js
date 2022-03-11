@@ -1,7 +1,6 @@
 import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed';
 
-function TwitterTimeLine({name}) {
-	// window.location.reload(false);
+function TwitterTimeLine({name, theme}) {
 	return (
 		 <TwitterTimelineEmbed
 			sourceType="profile"
@@ -11,7 +10,7 @@ function TwitterTimeLine({name}) {
 				height: '70vh',
 				width: '300px',
 			}}
-			// theme="dark"
+			theme={theme}
 			transparent="true"
 			noScrollbar="true"
 			lang="ja"

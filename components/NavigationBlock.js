@@ -3,8 +3,10 @@ import { useNavigation } from '@react-navigation/native';
 import $ from 'jquery';
 import { useTranslation } from 'react-i18next';
 import './i18n';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMoon } from "@fortawesome/free-solid-svg-icons";
 
-function navigate(path) {
+function navigate(path, darkModeHandler) {
   const navigation = useNavigation();
   return (() => {
     if ($('.title-center').hasClass("title-selected")) {
@@ -23,6 +25,7 @@ function navigate(path) {
     if (path === "Home") {
       window.location.reload();
     }
+    darkModeHandler();
     $('html, body').animate({ scrollTop: 0 }, 'fast');
   }
   );
@@ -35,26 +38,26 @@ function switchLang(lang) {
   $('#' + lang).addClass("title-selected");
 }
 
-function Menu() {
+function Menu({darkModeHandler}) {
   return (
     <div className="menu-bar" id="menu-block">
-      <div onClick={navigate("Home")} className="menu-item" id="menuHome">
+      <div onClick={navigate("Home", darkModeHandler)} className="menu-item" id="menuHome">
         Home
       </div>
-      <div onClick={navigate("Info")} className="menu-item" id="menuInfo">
+      <div onClick={navigate("Info", darkModeHandler)} className="menu-item" id="menuInfo">
         Info
       </div>
-      <div onClick={navigate("Repos")} className="menu-item" id="menuRepos">
+      <div onClick={navigate("Repos", darkModeHandler)} className="menu-item" id="menuRepos">
         Repos
       </div>
-      <div onClick={navigate("Game")} className="menu-item" id="menuGame">
+      <div onClick={navigate("Game", darkModeHandler)} className="menu-item" id="menuGame">
         Game
       </div>
     </div>
   );
 }
 
-function NavigationBlock({name}) {
+function NavigationBlock({name, darkModeHandler}) {
   const { t, i18n } = useTranslation();
   let [ menu, setMenu ] = useState(false);
   // const avatar = require("./assets/icon.png");
@@ -75,23 +78,34 @@ function NavigationBlock({name}) {
         >
           <span></span>
         </a>
-        <Menu />
+        <Menu darkModeHandler={darkModeHandler} />
       </div>
       <div className="guide-container">
-        <a className="title-center" onClick={navigate("Home")} id="Home">
+        <a className="title-center" onClick={navigate("Home", darkModeHandler)} id="Home">
           {t('Home')}
         </a>
-        <a className="title-center" onClick={navigate("Info")} id="Info">
+        <a className="title-center" onClick={navigate("Info", darkModeHandler)} id="Info">
           Info
         </a>
-        <a className="title-center" onClick={navigate("Repos")} id="Repos">
+        <a className="title-center" onClick={navigate("Repos", darkModeHandler)} id="Repos">
           Repos
         </a>
-        <a className="title-center" onClick={navigate("Game")} id="Game">
+        <a className="title-center" onClick={navigate("Game", darkModeHandler)} id="Game">
           Game
         </a>
       </div>
       <div className="right-action-container">
+        <div 
+          className="title-right" 
+          onClick={()=>{ 
+            $('#moon').toggleClass('title-selected'); 
+            darkModeHandler(); 
+            localStorage.setItem('dark_prefer', $('#moon').hasClass('title-selected'));
+          }} 
+          id="moon"
+        >
+          <FontAwesomeIcon icon={faMoon} />
+        </div>
         <div className="title-right" onClick={()=>{ i18n.changeLanguage('en'); switchLang("en"); }} id="en">
           E
         </div>

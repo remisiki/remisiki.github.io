@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import style from '../assets/index.css';
 import SideBar from './SideBar';
 import ReactCountryFlag from "react-country-flag"
@@ -28,11 +29,14 @@ function Folder({name, id}) {
   );
 }
 
-function InfoScreen({route, navigation}) {
+function InfoScreen({route, navigation, darkModeHandler}) {
   $('a[href^=http]').attr("target", "_blank");
   const { t, i18n } = useTranslation();
   const sections = ["Languages", "Programming", "Interests"];
   scrollWith(sections);
+  useEffect(() => {
+    darkModeHandler();
+  }, []);
   return (
     <div>
       <div id="content" className="wrapper doc">

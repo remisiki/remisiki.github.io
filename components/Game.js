@@ -91,7 +91,7 @@ function KeyMapper({leftClickHandler, rightClickHandler, escapeHandler}) {
   );
 }
 
-function GameScreen({route, navigation}) {
+function GameScreen({route, navigation, darkModeHandler, theme}) {
   const { t, i18n } = useTranslation();
   const sections = ["Touhou", "CAVE", "Hollow-Knight"];
   const length = photos.length;
@@ -118,10 +118,13 @@ function GameScreen({route, navigation}) {
     }
   }
   scrollWith(sections);
+  useEffect(() => {
+    darkModeHandler();
+  }, []);
   return (
     <div>
       <div className="twitter-tl" id="twitter-tl" >
-        <TwitterTimeLine name="mukei_stg"/>
+        <TwitterTimeLine name="mukei_stg" theme={theme} />
       </div>
 
       <div id="content" className="wrapper doc">

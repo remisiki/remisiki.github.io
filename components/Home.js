@@ -43,67 +43,54 @@ function HomeScreen({route, navigation, theme}) {
       <div id="content" className="wrapper doc">
         <article id={sections[0]}>
           <img src={avatar} alt="Furan" id="avatar" />
-          <h1>Welcome to Remisiki's Homepage!</h1>
-          <p>
-            This is my first homepage website made with <a href="https://ja.reactjs.org/">React.js</a>, and please forgive me for not being familiar with web design...
-          </p>
-          <p>
-            Homepage mainly contains my portfolio, public repositories, game status or other interests, galleries and future blogs if I have time to post some.
-          </p>
-          <p>
-            Feel free to move around to other tabs!
-          </p>
-          <p>
-            My profile icon comes from <a href="https://www.pixiv.net/artworks/28137362">here</a>.
-          </p>
+          <h1>{t("hms0t")}</h1>
+          <p>{t("hms0p0p0")}<a href="https://ja.reactjs.org/">React.js</a>{t("hms0p0p1")}</p>
+          <p>{t("hms0p1")}</p>
+          <p>{t("hms0p3p0")}<a href="https://www.pixiv.net/artworks/28137362">{t("hms0p3p1")}</a>{t("hms0p3p2")}</p>
         </article>
         <article id={sections[1]}>
-          <h1>
-            <span>Social Accounts</span>
-          </h1>
+          <h1>{t("hms1t")}</h1>
           <p>
             <FontAwesomeIcon icon="fa-brands fa-twitter" />
-            &ensp;Twitter (study):&ensp;
+            &ensp;{t("hms1p0")}&ensp;
             <a href="https://twitter.com/remisiki">@remisiki</a>
           </p>
           <p>
             <FontAwesomeIcon icon="fa-brands fa-github" />
-            &ensp;Github:&ensp;
+            &ensp;{t("hms1p1")}&ensp;
             <a href="https://github.com/remisiki">Remisiki</a>
           </p>
           <p>
             <FontAwesomeIcon icon="fa-brands fa-telegram" />
-            &ensp;Telegram:&ensp;
+            &ensp;{t("hms1p2")}&ensp;
             <a href="https://t.me/remisiki">@remisiki</a>
           </p>
           <p>
             <FontAwesomeIcon icon="fa-brands fa-twitter" />
-            &ensp;Twitter (game):&ensp;
+            &ensp;{t("hms1p3")}&ensp;
             <a href="https://twitter.com/mukei_stg">@mukei_stg</a>
           </p>
           <p>
             <FontAwesomeIcon icon="fa-brands fa-discord" />
-            &ensp;Discord:&ensp;
+            &ensp;{t("hms1p4")}&ensp;
             <a href="https://discordapp.com/users/422313209937002507">むけい#6131</a>
           </p>
           <p>
             <FontAwesomeIcon icon="fa-brands fa-steam" />
-            &ensp;Steam:&ensp;
+            &ensp;{t("hms1p5")}&ensp;
             <a href="https://steamcommunity.com/profiles/76561198843774402">むけい</a>
           </p>
           <p>
             <FontAwesomeIcon icon="fa-brands fa-youtube" />
-            &ensp;YouTube:&ensp;
+            &ensp;{t("hms1p6")}&ensp;
             <a href="https://www.youtube.com/channel/UC4mJDWoAdQBa-FUx_FXoiQw">れみしき</a>
           </p>
           <p>
             <FontAwesomeIcon icon={faEnvelope} />
-            &ensp;Mail:&ensp;
+            &ensp;{t("hms1p7")}&ensp;
             <a href="mailto:yangyiwen.sigo@hotmail.com">Hotmail</a>
           </p>
-          <p>
-            I use Twitter and Telegram quite often for private messages. <span className="yellow-marker-thin">Be careful that there may be not-safe-for-work retweets in my Twitter for game account!</span> Details of my Github repositories may be found in Repos tab. Feel free to add me on Steam, Discord and visit my Youtube channel to discover my gaming process!
-          </p>
+          <p>{t("hms1p8p0")}<span className="yellow-marker-thin">{t("hms1p8p1")}</span>{t("hms1p8p2")}</p>
         </article>
         <article id={sections[2]}>
           <h1>

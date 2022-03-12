@@ -38,19 +38,20 @@ function switchLang(lang) {
 }
 
 function Menu({darkModeHandler}) {
+  const { t, i18n } = useTranslation();
   return (
     <div className="menu-bar" id="menu-block">
       <div onClick={navigate("Home", darkModeHandler)} className="menu-item" id="menuHome">
-        Home
+        {t('Home')}
       </div>
       <div onClick={navigate("Info", darkModeHandler)} className="menu-item" id="menuInfo">
-        Info
+        {t('Info')}
       </div>
       <div onClick={navigate("Repos", darkModeHandler)} className="menu-item" id="menuRepos">
-        Repos
+        {t('Repos')}
       </div>
       <div onClick={navigate("Game", darkModeHandler)} className="menu-item" id="menuGame">
-        Game
+        {t('Game')}
       </div>
     </div>
   );
@@ -84,13 +85,13 @@ function NavigationBlock({name, darkModeHandler}) {
           {t('Home')}
         </a>
         <a className="title-center" onClick={navigate("Info", darkModeHandler)} id="Info">
-          Info
+          {t('Info')}
         </a>
         <a className="title-center" onClick={navigate("Repos", darkModeHandler)} id="Repos">
-          Repos
+          {t('Repos')}
         </a>
         <a className="title-center" onClick={navigate("Game", darkModeHandler)} id="Game">
-          Game
+          {t('Game')}
         </a>
       </div>
       <div className="right-action-container">

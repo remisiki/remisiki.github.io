@@ -4,6 +4,7 @@ import { NavigationContainer, DarkTheme, DefaultTheme } from '@react-navigation/
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import style from './assets/index.css';
 import $ from 'jquery';
+import { useTranslation } from 'react-i18next';
 import {
   HomeScreen,
   InfoScreen,
@@ -12,7 +13,7 @@ import {
   NavigationBlock,
 } from './components';
 import './components/translation/i18n';
-import { toggleDarkMode, getTheme } from './components/control/dark';
+import { toggleDarkMode, getTheme, checkDarkMode } from './components/control/dark';
 
 const MyTheme = {
   dark: false,
@@ -47,26 +48,15 @@ window.onload = function() {
       break;
   }
   $('a[href^=http]').attr("target", "_blank");
-  const dark_prefer = localStorage.getItem('dark_prefer')
-  if (dark_prefer == "true") {
-      $('#moon').addClass('title-selected');
-      toggleDarkMode();
-  }
-  else if (
-    dark_prefer == null &&
-    window.matchMedia &&
-    window.matchMedia('(prefers-color-scheme: dark)').matches
-  ) {
-      $('#moon').addClass('title-selected');
-    toggleDarkMode();
-  }
+  checkDarkMode();
 };
 
 function App() {
   const totop = require("./assets/page-top.webp");
-  // useEffect(() => {
-  //   checkDarkMode();
-  // }, []);
+  const { t, i18n } = useTranslation();
+  useEffect(() => {
+    checkDarkMode();
+  }, [i18n.language]);
   return (
     // <NavigationContainer theme={DefaultTheme}>
     <NavigationContainer theme={MyTheme}>
@@ -78,24 +68,16 @@ function App() {
           screenOptions={{ headerShown: false}}
           initialParams={{ darkModeHandler: toggleDarkMode() }}
         >
-          <Stack.Screen 
-            name="Home" 
-          >
+          <Stack.Screen name="Home" options={{ title: t("t") }}>
             {props => <HomeScreen {...props} theme={getTheme} />}
           </Stack.Screen>
-          <Stack.Screen 
-            name="Info" 
-          >
+          <Stack.Screen name="Info" options={{ title: t("t") }}>
             {props => <InfoScreen {...props} darkModeHandler={toggleDarkMode} />}
           </Stack.Screen>
-          <Stack.Screen 
-            name="Repos" 
-          >
+          <Stack.Screen name="Repos" options={{ title: t("t") }}>
             {props => <ReposScreen {...props} darkModeHandler={toggleDarkMode} />}
           </Stack.Screen>
-          <Stack.Screen 
-            name="Game" 
-          >
+          <Stack.Screen name="Game" options={{ title: t("t") }}>
             {props => <GameScreen {...props} darkModeHandler={toggleDarkMode} theme={getTheme} />}
           </Stack.Screen>
         </Stack.Group>

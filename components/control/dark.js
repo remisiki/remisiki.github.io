@@ -35,4 +35,20 @@ function themeIsDark() {
   return ($('#moon').hasClass('title-selected'));
 }
 
-export { toggleDarkMode, getTheme, themeIsDark }
+function checkDarkMode() {
+  const dark_prefer = localStorage.getItem('dark_prefer')
+  if (dark_prefer == "true") {
+      $('#moon').addClass('title-selected');
+      toggleDarkMode();
+  }
+  else if (
+    dark_prefer == null &&
+    window.matchMedia &&
+    window.matchMedia('(prefers-color-scheme: dark)').matches
+  ) {
+      $('#moon').addClass('title-selected');
+    toggleDarkMode();
+  }
+}
+
+export { toggleDarkMode, getTheme, themeIsDark, checkDarkMode }

@@ -47,7 +47,7 @@ function SideBar({sections, tool = false, name}) {
 		navis.push(SideNavi(sections[i]));
 	}
 	useEffect(() => {
-		if (mobile_view) {
+		if (mobile_view && $(`#sidecontent-${name}`).is(':visible')) {
 			foldSideBar(name);
 			$(`#sidebar-${name}`).addClass('right-aside');
 		}

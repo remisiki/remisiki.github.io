@@ -226,7 +226,7 @@ function GameScreen({route, navigation, darkModeHandler, theme}) {
           rightPosition={10}
           leftClickHandler={() => leftClickHandler()}
           rightClickHandler={() => rightClickHandler()}
-          text="Gallery"
+          text={t("Gallery")}
         />
         <Img 
           src={require(`../assets/${photos.at(photo_index).thumb}.webp`)} 

@@ -1,10 +1,18 @@
 import Box from './Box';
 
 function Project({name, description, href, thumb, lang}) {
-  const avatar = require("../../assets/avatar.jpg");
+  let thumbnail;
+  if (thumb === "") {
+     thumbnail = require("../../assets/avatar.jpg");
+  }
+  else {
+    thumbnail = require(`../../assets/${thumb}.webp`);
+  }
   return (
     <a className="cell" href={href}>
-      <img src={avatar} />
+      <div className="img-container">
+        <img src={thumbnail} />
+      </div>
       <span className="title">{name}</span>
       <br />
       <span className="content">{description}</span>

@@ -31,8 +31,8 @@ function navigate(path, darkModeHandler) {
 }
 
 function switchLang(lang) {
-  if ($('.title-right').hasClass("title-selected")) {
-      $('.title-right').removeClass("title-selected");
+  if ($('.title-right:not(#moon)').hasClass("title-selected")) {
+      $('.title-right:not(#moon)').removeClass("title-selected");
   }
   $('#' + lang).addClass("title-selected");
 }

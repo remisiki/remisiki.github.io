@@ -3,6 +3,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import $ from 'jquery';
 import { get } from '../http/request';
+import { useTranslation } from 'react-i18next';
 
 function Img({src, handler, index}) {
   return (
@@ -13,9 +14,10 @@ function Img({src, handler, index}) {
 }
 
 function ViewSource({src}) {
+  const { t, i18n } = useTranslation();
   return (
     <a href={src} className="original" onClick={(e) => e.stopPropagation()} target="_blank">
-     オリジナル
+      {t("Original")}
     </a>
   );
 }

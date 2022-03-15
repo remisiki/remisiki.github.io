@@ -11,8 +11,10 @@ import {
   Footer,
   Project,
 } from './widgets';
+import { useTranslation } from 'react-i18next';
 
 function ReposScreen({route, navigation, darkModeHandler}) {
+  const { t, i18n } = useTranslation();
   $('a[href^=http]').attr("target", "_blank");
   let [lists, setLists] = useState(false);
   useEffect(async () => {
@@ -29,14 +31,13 @@ function ReposScreen({route, navigation, darkModeHandler}) {
         { lists && <Chart data={lists} />}
         { lists && <List data={lists} />}
         <div className="cell_container">
-          <Project name="remisiki-home" description="Homepage Web App" href="https://github.com/remisiki/remisiki-home" thumb="" lang="JavaScript" />
-          <Project name="kettyan-bot" description="Telegram Pixiv Illust Bot" href="https://remisiki.github.io/kettyan-bot/" thumb="" lang="Python" />
-          <Project name="umjicanvas" description="Activity Count for UM-JI Canvas" href="https://github.com/remisiki/umjicanvas" thumb="" lang="Java" />
-          <Project name="GMM-Demux" description="Barcoding Data Processing Tool" href="https://gmm-demux.readthedocs.io/en/latest/" thumb="" lang="Python" />
-          <Project name="k-gatya" description="Random Pixiv Artworks Webpage" href="https://remisiki.github.io/k-gatya/" thumb="" lang="JavaScript" />
-          <Project name="ECE4710J" description="UM-JI Course File" href="https://github.com/remisiki/ECE4710J" thumb="" lang="Python" />
-          <Project name="VE370" description="UM-JI Course File" href="https://github.com/remisiki/VE370" thumb="" lang="Verilog" />
-          <Project name="Test" description="hogehoge" href="" thumb="" lang="Batchfile" />
+          <Project name="remisiki-home" description={t("proj0")} href="https://github.com/remisiki/remisiki-home" thumb="" lang="JavaScript" />
+          <Project name="kettyan-bot" description={t("proj1")} href="https://remisiki.github.io/kettyan-bot/" thumb="ket" lang="Python" />
+          <Project name="umjicanvas" description={t("proj2")} href="https://github.com/remisiki/umjicanvas" thumb="umjicanvas" lang="Java" />
+          <Project name="GMM-Demux" description={t("proj3")} href="https://gmm-demux.readthedocs.io/en/latest/" thumb="tsne" lang="Python" />
+          <Project name="k-gatya" description={t("proj4")} href="https://remisiki.github.io/k-gatya/" thumb="keg" lang="JavaScript" />
+          <Project name="ECE4710J" description={t("projji")} href="https://github.com/remisiki/ECE4710J" thumb="svm" lang="Python" />
+          <Project name="VE370" description={t("projji")} href="https://github.com/remisiki/VE370" thumb="cpu" lang="Verilog" />
           <Project name="ここまでだ。。。" description="もっとがんばります！" href="" thumb="" lang="C++" />
         </div>
         <div className="gap"></div>

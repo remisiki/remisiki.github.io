@@ -1,28 +1,34 @@
 {
   "files": {
-    "app.js": "/static/js/app.252e6e45.chunk.js",
-    "app.js.map": "/static/js/app.252e6e45.chunk.js.map",
+    "app.js": "/static/js/app.2af92b8a.chunk.js",
+    "app.js.map": "/static/js/app.2af92b8a.chunk.js.map",
     "runtime~app.js": "/static/js/runtime~app.2e9f1821.js",
     "runtime~app.js.map": "/static/js/runtime~app.2e9f1821.js.map",
-    "static/js/2.85d1cf1d.chunk.js": "/static/js/2.85d1cf1d.chunk.js",
-    "static/js/2.85d1cf1d.chunk.js.map": "/static/js/2.85d1cf1d.chunk.js.map",
+    "static/js/2.1f0df86e.chunk.js": "/static/js/2.1f0df86e.chunk.js",
+    "static/js/2.1f0df86e.chunk.js.map": "/static/js/2.1f0df86e.chunk.js.map",
     "favicon-16.png": "/favicon-16.png",
     "favicon-32.png": "/favicon-32.png",
     "favicon.ico": "/favicon.ico",
     "index.html": "/index.html",
     "manifest.json": "/manifest.json",
     "serve.json": "/serve.json",
-    "static/js/2.85d1cf1d.chunk.js.LICENSE.txt": "/static/js/2.85d1cf1d.chunk.js.LICENSE.txt",
+    "static/js/2.1f0df86e.chunk.js.LICENSE.txt": "/static/js/2.1f0df86e.chunk.js.LICENSE.txt",
     "static/media/acho.webp": "/static/media/acho.c3a6c258.webp",
     "static/media/akekon.webp": "/static/media/akekon.8bf0390b.webp",
     "static/media/avatar.jpg": "/static/media/avatar.f786c941.jpg",
     "static/media/background.webp": "/static/media/background.cdd61a77.webp",
+    "static/media/cpu.webp": "/static/media/cpu.23b076d0.webp",
+    "static/media/keg.webp": "/static/media/keg.3f0b31ff.webp",
+    "static/media/ket.webp": "/static/media/ket.1061f528.webp",
     "static/media/page-top.webp": "/static/media/page-top.68c7ef52.webp",
-    "static/media/seirensen.webp": "/static/media/seirensen.f8c2a49e.webp"
+    "static/media/seirensen.webp": "/static/media/seirensen.f8c2a49e.webp",
+    "static/media/svm.webp": "/static/media/svm.e7d1747e.webp",
+    "static/media/tsne.webp": "/static/media/tsne.13b2bb2a.webp",
+    "static/media/umjicanvas.webp": "/static/media/umjicanvas.e16b1bad.webp"
   },
   "entrypoints": [
     "static/js/runtime~app.2e9f1821.js",
-    "static/js/2.85d1cf1d.chunk.js",
-    "static/js/app.252e6e45.chunk.js"
+    "static/js/2.1f0df86e.chunk.js",
+    "static/js/app.2af92b8a.chunk.js"
   ]
 }

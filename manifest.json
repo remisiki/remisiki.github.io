@@ -1,9 +1,8 @@
 {
-  "background_color": "#ffffff",
   "display": "standalone",
   "lang": "en",
-  "name": "native",
-  "short_name": "native",
+  "name": "れみしきのへや",
+  "short_name": "れみしきのへや",
   "start_url": "/?utm_source=web_app_manifest",
   "orientation": "portrait",
   "icons": [

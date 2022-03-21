@@ -31,7 +31,7 @@ function ToDoList({num, status}) {
 function HomeScreen({route, navigation, theme}) {
   const avatar = require("../assets/avatar.jpg");
   const sections = ["Welcome", "Accounts", "ToDo-List"];
-  const todo_status = ["progress", "pend", "progress", "complete", "pend", "pend", "pend", "pend", "pend", "stop", "pend", "progress", "pend", "pend", "progress"];
+  const todo_status = ["progress", "pend", "progress", "complete", "pend", "pend", "pend", "pend", "pend", "stop", "pend", "progress", "pend", "pend", "progress", "progress"];
   const { t, i18n } = useTranslation();
   scrollWith(sections);
   return (
@@ -100,7 +100,7 @@ function HomeScreen({route, navigation, theme}) {
             {t("todot")}
           </p>
           <ul>
-            <ToDoList num={15} status={todo_status} />
+            <ToDoList num={16} status={todo_status} />
           </ul>
         </article>
         <SideBar sections={sections} name="home" />

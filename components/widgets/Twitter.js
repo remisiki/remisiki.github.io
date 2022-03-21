@@ -7,7 +7,7 @@ function TwitterTimeLine({name, theme}) {
 			screenName={name}
 			// key={key}
 			options={{
-				height: '70vh',
+				height: 'calc(100vh - 245px)',
 				width: '300px',
 			}}
 			theme={theme}

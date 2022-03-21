@@ -220,7 +220,7 @@ function GameScreen({route, navigation, darkModeHandler, theme}) {
             "textAlign": "center",
             "color": "#eee",
             "fontWeight": "bold",
-            "fontSize": 26
+            "fontSize": 20
           }}
           leftPosition={10}
           rightPosition={10}
@@ -238,7 +238,7 @@ function GameScreen({route, navigation, darkModeHandler, theme}) {
           style={{
             "textAlign": "center",
             "color": "#eee",
-            "fontSize": 20
+            "fontSize": 18
           }}>
           {photo_index + 1}/{length}
         </div>

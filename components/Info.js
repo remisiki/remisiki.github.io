@@ -195,8 +195,8 @@ function InfoScreen({route, navigation, darkModeHandler}) {
             <li>
               <Folder name="JavaScript" id="javascript" />
               <div className="fold-block" id="javascript">
-                <p className="brown-text">
-                  {t("futuu")}
+                <p className="green-text">
+                  {t("gut")}
                 </p>
                 <p>
                   {t("javascript")}

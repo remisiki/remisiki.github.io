@@ -13,7 +13,7 @@ function encode(str) {
   }
 }
 
-function Box({ lang = "C++", text, width = '20px', height = '20px' }) {
+function Box({ lang = "C++", text, width = '16px', height = '16px' }) {
   let color = "#555555";
   let text_color = "#eee";
   try {

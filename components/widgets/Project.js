@@ -16,7 +16,7 @@ function Project({name, description, href, thumb, lang}) {
       <span className="title">{name}</span>
       <br />
       <span className="content">{description}</span>
-      <Box lang={lang} text={lang} width={`${lang.length * 9}px`} />
+      <Box lang={lang} text={lang} width={`${lang.length * 9}px`} height="20px" />
     </a>
   );
 }

@@ -34,13 +34,13 @@ blockquote:before,blockquote:after,q:before,q:after {
 }
 
 blockquote {
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 10px;
     line-height: 2;
 }
 
 ol,ul {
-    font-size: 20px;
+    font-size: 16px;
     margin-left: 1em;
     line-height: 1.7;
 }
@@ -85,13 +85,13 @@ article h1 a:hover,article h2 a:hover,article h3 a:hover,article h4 a:hover,arti
 }
 
 article h1 {
-    font-size: 48px;
+    font-size: 40px;
     margin: 0 0 18px;
     border-bottom: 4px solid #eee;
 }
 
 article h2 {
-    font-size: 36px;
+    font-size: 28px;
     margin-bottom: 40px;
 }
 
@@ -105,12 +105,12 @@ article h2 span::before, article h2 span::after {
 }
 
 article h3 {
-    font-size: 28px;
+    font-size: 20px;
     margin-bottom: 9px;
 }
 
 article h4 {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 3px;
 }
 
@@ -127,7 +127,7 @@ article .subheader {
 }
 
 article p {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.7;
 }
 
@@ -136,7 +136,7 @@ article p img {
 }
 
 article p.lead {
-    font-size: 20px;
+    font-size: 16px;
     font-size: 1.8rem;
     line-height: 1.5;
 }
@@ -337,7 +337,7 @@ h1 {
 
 h2 {
     font-weight: bold;
-    font-size: 28px;
+    font-size: 20px;
 }
 
 hr {
@@ -401,7 +401,7 @@ body {
     margin: 2px 0;
     border-left: 4px solid #eee;
     transition: font-size 0.1s ease-in-out;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .wrapper aside ul a:hover {
@@ -410,7 +410,7 @@ body {
 }
 
 .wrapper aside h3 {
-    font-size: 24px;
+    font-size: 20px;
     color: #333;
     font-weight: bold;
     line-height: 2em;
@@ -1048,7 +1048,7 @@ html {
 
 .photo_container {
     position: fixed;
-    bottom: 100px;
+    bottom: 125px;
     left: 10px;
 }
 
@@ -1142,7 +1142,7 @@ html {
     right: 20px;
     top: 150px;
     color: #eee;
-    font-size: 36px;
+    font-size: 28px;
     overflow-wrap: break-word;
     padding: 10px;
     max-width: 20vw;
@@ -1277,8 +1277,8 @@ html {
 }
 
 .arrow {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     border-radius: 30%;
     background-color: rgba(0, 0, 0, 0.2);
     transition: all 0.2s ease;

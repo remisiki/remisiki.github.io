@@ -36,6 +36,7 @@ function ReposScreen({route, navigation, darkModeHandler}) {
           <Project name="umjicanvas" description={t("proj2")} href="https://github.com/remisiki/umjicanvas" thumb="umjicanvas" lang="Java" />
           <Project name="GMM-Demux" description={t("proj3")} href="https://gmm-demux.readthedocs.io/en/latest/" thumb="tsne" lang="Python" />
           <Project name="k-gatya" description={t("proj4")} href="https://remisiki.github.io/k-gatya/" thumb="keg" lang="JavaScript" />
+          <Project name="remiqq" description={t("proj5")} href="https://github.com/remisiki/remiqq" thumb="electron" lang="JavaScript" />
           <Project name="ECE4710J" description={t("projji")} href="https://github.com/remisiki/ECE4710J" thumb="svm" lang="Python" />
           <Project name="VE370" description={t("projji")} href="https://github.com/remisiki/VE370" thumb="cpu" lang="Verilog" />
           <Project name="ここまでだ。。。" description="もっとがんばります！" href="" thumb="" lang="C++" />

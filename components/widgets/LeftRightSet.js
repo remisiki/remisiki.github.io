@@ -18,8 +18,8 @@ function LeftRightSet({style, leftPosition, rightPosition, leftClickHandler, rig
           src={arrow} 
           style={{
             transform: "rotateZ(-90deg)",
-            width: 40,
-            height: 40,
+            width: 30,
+            height: 30,
             filter: "brightness(0) invert(1)"
           }} 
         />
@@ -41,8 +41,8 @@ function LeftRightSet({style, leftPosition, rightPosition, leftClickHandler, rig
           src={arrow} 
           style={{
             transform: "rotateZ(90deg)",
-            width: 40,
-            height: 40,
+            width: 30,
+            height: 30,
             filter: "brightness(0) invert(1)"
           }} 
         />

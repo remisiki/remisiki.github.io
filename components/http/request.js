@@ -16,7 +16,7 @@ function doRequest(options) {
 async function get(url) {
   /* This token is for public only, just to prevent Github from detecting it.
   So useless even if someone steals it lol. */
-  const decrypted = CryptoJS.AES.decrypt("U2FsdGVkX1+Hjf1nMrqBnHJKkpH0RpI5BCN2sLqLaI1yB7J+LU/J1G4j7+TLSrZmtagUE88l2XyWXWJoE+t1kQ==", "114514").toString(CryptoJS.enc.Utf8);
+  const decrypted = CryptoJS.AES.decrypt("U2FsdGVkX1+vCdRBoY9RqKuSOZ8NTXPO/RyH0GC0HSx404oJ1/kRQsfPNHcWS28VYZtGVaSVxF2liRy1bzVqAw==", "114514").toString(CryptoJS.enc.Utf8);
   const options = {
     url: url,
     method: 'GET',

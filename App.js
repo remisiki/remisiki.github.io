@@ -1,17 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { Button, View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import { NavigationContainer, DarkTheme, DefaultTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import style from './assets/index.css';
 import $ from 'jquery';
 import { useTranslation } from 'react-i18next';
-import {
-  HomeScreen,
-  InfoScreen,
-  ReposScreen,
-  GameScreen,
-  NavigationBlock,
-} from './components';
+import { NavigationBlock } from './components';
+const HomeScreen = React.lazy(() => import('./components/Home'));
+const InfoScreen = React.lazy(() => import('./components/Info'));
+const ReposScreen = React.lazy(() => import('./components/Repos'));
+const GameScreen = React.lazy(() => import('./components/Game'));
 import './components/translation/i18n';
 import { toggleDarkMode, getTheme, checkDarkMode } from './components/control/dark';
 
@@ -69,16 +67,32 @@ function App() {
           initialParams={{ darkModeHandler: toggleDarkMode() }}
         >
           <Stack.Screen name="Home" options={{ title: t("t") }}>
-            {props => <HomeScreen {...props} theme={getTheme} />}
+            {props => 
+              <Suspense fallback={<div></div>} >
+                <HomeScreen {...props} theme={getTheme} />
+              </Suspense>
+            }
           </Stack.Screen>
           <Stack.Screen name="Info" options={{ title: t("t") }}>
-            {props => <InfoScreen {...props} darkModeHandler={toggleDarkMode} />}
+            {props => 
+              <Suspense fallback={<div></div>} >
+                <InfoScreen {...props} darkModeHandler={toggleDarkMode} />
+              </Suspense>
+            }
           </Stack.Screen>
           <Stack.Screen name="Repos" options={{ title: t("t") }}>
-            {props => <ReposScreen {...props} darkModeHandler={toggleDarkMode} />}
+            {props => 
+              <Suspense fallback={<div></div>} >
+                <ReposScreen {...props} darkModeHandler={toggleDarkMode} />
+              </Suspense>
+            }
           </Stack.Screen>
           <Stack.Screen name="Game" options={{ title: t("t") }}>
-            {props => <GameScreen {...props} darkModeHandler={toggleDarkMode} theme={getTheme} />}
+            {props => 
+              <Suspense fallback={<div></div>} >
+                <GameScreen {...props} darkModeHandler={toggleDarkMode} theme={getTheme} />
+              </Suspense>
+            }
           </Stack.Screen>
         </Stack.Group>
       </Stack.Navigator>

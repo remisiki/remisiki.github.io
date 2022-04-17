@@ -207,7 +207,7 @@ function GameScreen({route, navigation, darkModeHandler, theme}) {
           </ul>
           <YoutubePlayer
             height={(window.innerWidth <= 800) ? 200 : 450}
-            videoId={"y6EIHv95NR8"}
+            videoId={"bm3nN4nFiUQ"}
           />
         </article>
         <SideBar sections={sections} name="repos" />

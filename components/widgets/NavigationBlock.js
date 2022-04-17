@@ -68,7 +68,7 @@ function NavigationBlock({name, darkModeHandler}) {
     />*/
     <div className="wrapper nav-block">
       <div className="left-container">
-        <a 
+        <div
           className="title-left menu-btn" 
           onClick={() => {
             $('#menu-block').toggle();
@@ -77,22 +77,22 @@ function NavigationBlock({name, darkModeHandler}) {
           id="menu"
         >
           <span></span>
-        </a>
+        </div>
         <Menu darkModeHandler={darkModeHandler} />
       </div>
       <div className="guide-container">
-        <a className="title-center" onClick={navigate("Home", darkModeHandler)} id="Home">
+        <div className="title-center" onClick={navigate("Home", darkModeHandler)} id="Home">
           {t('Home')}
-        </a>
-        <a className="title-center" onClick={navigate("Info", darkModeHandler)} id="Info">
+        </div>
+        <div className="title-center" onClick={navigate("Info", darkModeHandler)} id="Info">
           {t('Info')}
-        </a>
-        <a className="title-center" onClick={navigate("Repos", darkModeHandler)} id="Repos">
+        </div>
+        <div className="title-center" onClick={navigate("Repos", darkModeHandler)} id="Repos">
           {t('Repos')}
-        </a>
-        <a className="title-center" onClick={navigate("Game", darkModeHandler)} id="Game">
+        </div>
+        <div className="title-center" onClick={navigate("Game", darkModeHandler)} id="Game">
           {t('Game')}
-        </a>
+        </div>
       </div>
       <div className="right-action-container">
         <div 

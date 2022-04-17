@@ -904,12 +904,13 @@ html {
 .title-center, .title-right {
     display: inline-block;
     /*height: 10px;*/
-    font-size: 25px;
+    font-size: 22px;
     font-weight: bold;
     color: #eee;
     line-height: 25px;
     text-align: center;
     user-select: none;
+    cursor: pointer;
 }
 
 .wrapper .title-center, .title-right {
@@ -921,7 +922,7 @@ html {
 .wrapper .title-center {
     padding: 19px 10px 19px;
     margin-left: 10px;
-    width: 150px;
+    width: 140px;
     text-decoration: none;
 }
 
@@ -934,10 +935,8 @@ html {
     top: 10px;
 }
 
-.wrapper .title-center:hover, .title-right:hover {
-    color: #eee;
+.wrapper .title-center:hover:not(.title-selected), .title-right:hover:not(.title-selected) {
     background-color: rgba(0, 0, 0, 0.3);
-    cursor: pointer;
 }
 
 .wrapper .title-center:active, .title-right:active {

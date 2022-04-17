@@ -60,14 +60,13 @@ function Menu({darkModeHandler}) {
 function NavigationBlock({name, darkModeHandler}) {
   const { t, i18n } = useTranslation();
   let [ menu, setMenu ] = useState(false);
-  // const avatar = require("./assets/icon.png");
+  const logo = require("../../assets/favicon.png");
   return (
-    /*<Image
-      style={{ width: 50, height: 50 }}
-      source={require('./assets/icon.png')}
-    />*/
     <div className="wrapper nav-block">
       <div className="left-container">
+        <div id="head-logo">
+          <img src={logo} className="logo" />
+        </div>
         <div
           className="title-left menu-btn" 
           onClick={() => {

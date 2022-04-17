@@ -545,27 +545,27 @@ header nav a.download:active {
 }
 
 footer {
-    padding: 40px 0;
+    height: 100px;
     background-color: #1b2c4c;
     border-top: 1px solid #e5e5e5;
     color: #aaa;
     position: relative;
     z-index: -1;
+    overflow: hidden;
 }
 
 footer span {
-    position: relative;
-    left: 50px;
+    position: absolute;
+    left: 140px;
+    top: 40px;
 }
 
-footer .logo {
+#foot-logo {
     position: absolute;
-    top: 55px;
-    left: 50%;
-    margin-left: -480px;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    left: 50px;
+    top: 15px;
+    height: 70px;
+    width: 70px;
 }
 
 footer:after {
@@ -1292,6 +1292,22 @@ html {
     margin-bottom: 50px;
 }
 
+.logo {
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#head-logo {
+    position: relative;
+    top: 4px;
+    left: 4px;
+    height: 55px;
+    width: 55px;
+    display: inline-block;
+    overflow: hidden;
+}
+
 @media only screen and (max-width: 425px) {
     .guide-container, .twitter-tl, .photo_container {
         display: none;
@@ -1317,6 +1333,9 @@ html {
     #langlist {
         position: relative;
         top: 100px;
+    }
+    #head-logo {
+        display: none;
     }
     
 

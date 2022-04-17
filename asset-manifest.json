@@ -2,16 +2,16 @@
   "files": {
     "static/js/0.9f03f9ee.chunk.js": "/static/js/0.9f03f9ee.chunk.js",
     "static/js/0.9f03f9ee.chunk.js.map": "/static/js/0.9f03f9ee.chunk.js.map",
-    "app.js": "/static/js/app.1e1b9bea.chunk.js",
-    "app.js.map": "/static/js/app.1e1b9bea.chunk.js.map",
-    "runtime~app.js": "/static/js/runtime~app.14a8d912.js",
-    "runtime~app.js.map": "/static/js/runtime~app.14a8d912.js.map",
+    "app.js": "/static/js/app.dcf835ab.chunk.js",
+    "app.js.map": "/static/js/app.dcf835ab.chunk.js.map",
+    "runtime~app.js": "/static/js/runtime~app.3e7556ed.js",
+    "runtime~app.js.map": "/static/js/runtime~app.3e7556ed.js.map",
     "static/js/3.038d184a.chunk.js": "/static/js/3.038d184a.chunk.js",
     "static/js/3.038d184a.chunk.js.map": "/static/js/3.038d184a.chunk.js.map",
     "static/js/4.de521fee.chunk.js": "/static/js/4.de521fee.chunk.js",
     "static/js/4.de521fee.chunk.js.map": "/static/js/4.de521fee.chunk.js.map",
-    "static/js/5.fafeef52.chunk.js": "/static/js/5.fafeef52.chunk.js",
-    "static/js/5.fafeef52.chunk.js.map": "/static/js/5.fafeef52.chunk.js.map",
+    "static/js/5.cf9785f4.chunk.js": "/static/js/5.cf9785f4.chunk.js",
+    "static/js/5.cf9785f4.chunk.js.map": "/static/js/5.cf9785f4.chunk.js.map",
     "favicon-16.png": "/favicon-16.png",
     "favicon-32.png": "/favicon-32.png",
     "favicon.ico": "/favicon.ico",
@@ -35,8 +35,8 @@
     "static/media/umjicanvas.webp": "/static/media/umjicanvas.e16b1bad.webp"
   },
   "entrypoints": [
-    "static/js/runtime~app.14a8d912.js",
+    "static/js/runtime~app.3e7556ed.js",
     "static/js/3.038d184a.chunk.js",
-    "static/js/app.1e1b9bea.chunk.js"
+    "static/js/app.dcf835ab.chunk.js"
   ]
 }

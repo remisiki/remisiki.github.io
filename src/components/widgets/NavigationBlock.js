@@ -1,33 +1,32 @@
 import React, { useState } from "react";
-import { useNavigation } from '@react-navigation/native';
 import $ from 'jquery';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
+import { toggleDarkMode } from '../control/dark';
 
-function navigate(path, darkModeHandler) {
-  const navigation = useNavigation();
+function navigate(path) {
   return (() => {
-    if ($('.title-center').hasClass("title-selected")) {
-      $('.title-center').removeClass("title-selected");
-    }
-    if ($('.menu-item').hasClass("menu-item-selected")) {
-      $('.menu-item').removeClass("menu-item-selected");
-    }
-    if ($('#menu').hasClass("menu-btn-selected")) {
-      $('#menu').removeClass("menu-btn-selected");
-    }
-    $(`#${path}`).addClass("title-selected");
-    $(`#menu${path}`).addClass("menu-item-selected");
-    $('#menu-block').hide();
-    navigation.navigate(path, {});
-    if (path === "Home") {
-      window.location.reload();
-    }
-    darkModeHandler();
+    window.location.href = `#/${(path === 'home') ? '' : path}`;
     $('html, body').animate({ scrollTop: 0 }, 'fast');
+    selectNavi(path);
   }
   );
+}
+
+function selectNavi(path) {
+  if ($('.title-center').hasClass("title-selected")) {
+    $('.title-center').removeClass("title-selected");
+  }
+  if ($('.menu-item').hasClass("menu-item-selected")) {
+    $('.menu-item').removeClass("menu-item-selected");
+  }
+  if ($('#menu').hasClass("menu-btn-selected")) {
+    $('#menu').removeClass("menu-btn-selected");
+  }
+  $(`#navi-${path}`).addClass("title-selected");
+  $(`#menu-${path}`).addClass("menu-item-selected");
+  $('#menu-block').hide();
 }
 
 function switchLang(lang) {
@@ -37,27 +36,27 @@ function switchLang(lang) {
   $('#' + lang).addClass("title-selected");
 }
 
-function Menu({darkModeHandler}) {
+function Menu() {
   const { t, i18n } = useTranslation();
   return (
     <div className="menu-bar" id="menu-block">
-      <div onClick={navigate("Home", darkModeHandler)} className="menu-item" id="menuHome">
+      <div onClick={navigate("home")} className="menu-item" id="menu-home">
         {t('Home')}
       </div>
-      <div onClick={navigate("Info", darkModeHandler)} className="menu-item" id="menuInfo">
+      <div onClick={navigate("profile")} className="menu-item" id="menu-profile">
         {t('Info')}
       </div>
-      <div onClick={navigate("Repos", darkModeHandler)} className="menu-item" id="menuRepos">
+      <div onClick={navigate("project")} className="menu-item" id="menu-project">
         {t('Repos')}
       </div>
-      <div onClick={navigate("Game", darkModeHandler)} className="menu-item" id="menuGame">
+      <div onClick={navigate("game")} className="menu-item" id="menu-game">
         {t('Game')}
       </div>
     </div>
   );
 }
 
-function NavigationBlock({name, darkModeHandler}) {
+function NavigationBlock({name}) {
   const { t, i18n } = useTranslation();
   let [ menu, setMenu ] = useState(false);
   const logo = require("../../assets/favicon.png");
@@ -77,19 +76,19 @@ function NavigationBlock({name, darkModeHandler}) {
         >
           <span></span>
         </div>
-        <Menu darkModeHandler={darkModeHandler} />
+        <Menu />
       </div>
       <div className="guide-container">
-        <div className="title-center" onClick={navigate("Home", darkModeHandler)} id="Home">
+        <div className="title-center" onClick={navigate("home")} id="navi-home">
           {t('Home')}
         </div>
-        <div className="title-center" onClick={navigate("Info", darkModeHandler)} id="Info">
+        <div className="title-center" onClick={navigate("profile")} id="navi-profile">
           {t('Info')}
         </div>
-        <div className="title-center" onClick={navigate("Repos", darkModeHandler)} id="Repos">
+        <div className="title-center" onClick={navigate("project")} id="navi-project">
           {t('Repos')}
         </div>
-        <div className="title-center" onClick={navigate("Game", darkModeHandler)} id="Game">
+        <div className="title-center" onClick={navigate("game")} id="navi-game">
           {t('Game')}
         </div>
       </div>
@@ -98,8 +97,8 @@ function NavigationBlock({name, darkModeHandler}) {
           className="title-right" 
           onClick={()=>{ 
             $('#moon').toggleClass('title-selected'); 
-            darkModeHandler(); 
             localStorage.setItem('dark_prefer', $('#moon').hasClass('title-selected'));
+            toggleDarkMode(); 
           }} 
           id="moon"
         >
@@ -119,4 +118,4 @@ function NavigationBlock({name, darkModeHandler}) {
   );
 }
 
-export default NavigationBlock;
+export { NavigationBlock, selectNavi, switchLang };

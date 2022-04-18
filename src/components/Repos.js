@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import style from '../assets/index.css';
 import { scrollWith } from './control/scroll';
 import $ from 'jquery';
 import { mostUsedLanguage } from './http/github';
@@ -12,18 +11,24 @@ import {
   Project,
 } from './widgets';
 import { useTranslation } from 'react-i18next';
+import { checkDarkMode } from './control/dark';
+import { selectNavi, switchLang } from './widgets/NavigationBlock';
 
-function ReposScreen({route, navigation, darkModeHandler}) {
+function ReposScreen() {
   const { t, i18n } = useTranslation();
   $('a[href^=http]').attr("target", "_blank");
   let [lists, setLists] = useState(false);
-  useEffect(async () => {
-    lists = await mostUsedLanguage();
-    setLists(lists);
-  },[])
   useEffect(() => {
-    darkModeHandler();
-  }, []);
+    selectNavi('project');
+    switchLang(i18n.language);
+    checkDarkMode();
+    async function fetchGithubData() {
+      const res = await mostUsedLanguage();
+      setLists(res);
+    }
+    fetchGithubData();
+    window.scrollTo(0, 0);
+  }, [])
   scrollWith([]);
   return (
     <div>

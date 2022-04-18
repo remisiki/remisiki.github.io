@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { scrollWith } from './control/scroll';
 import { useTranslation } from 'react-i18next';
-import YoutubePlayer from "react-native-youtube-iframe";
+import YouTube from 'react-youtube';
 import { Img, ViewSource, Description } from './widgets/Gallery';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
@@ -14,8 +14,10 @@ import {
   Footer,
   LeftRightSet,
 } from './widgets';
+import { getTheme, checkDarkMode } from './control/dark';
+import { selectNavi, switchLang } from './widgets/NavigationBlock';
 
-function GameScreen({route, navigation, darkModeHandler, theme}) {
+function GameScreen() {
   const { t, i18n } = useTranslation();
   const sections = ["Touhou", "CAVE", "Hollow-Knight"];
   const length = photos.length;
@@ -43,12 +45,14 @@ function GameScreen({route, navigation, darkModeHandler, theme}) {
   }
   scrollWith(sections);
   useEffect(() => {
-    darkModeHandler();
+    selectNavi('game');
+    switchLang(i18n.language);
+    checkDarkMode();
   }, []);
   return (
     <div>
       <div className="twitter-tl" id="twitter-tl" >
-        <TwitterTimeLine name="mukei_stg" theme={theme} />
+        <TwitterTimeLine name="mukei_stg" theme={getTheme} />
       </div>
 
       <div id="content" className="wrapper doc">
@@ -205,12 +209,15 @@ function GameScreen({route, navigation, darkModeHandler, theme}) {
               <p>{t("gms2l0p0")}</p>
             </li>
           </ul>
-          <YoutubePlayer
-            height={(window.innerWidth <= 800) ? 200 : 450}
+          <YouTube
             videoId={"bm3nN4nFiUQ"}
+            opts={{
+              height: (window.innerWidth <= 800) ? 200 : 450,
+              width: '100%'
+            }}
           />
         </article>
-        <SideBar sections={sections} name="repos" />
+        <SideBar sections={sections} name="game" />
         <div className="gap"></div>
       </div>
       <div className="photo_container">

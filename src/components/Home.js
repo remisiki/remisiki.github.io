@@ -1,4 +1,4 @@
-import SideBar from './widgets/SideBar';
+import { useEffect } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { scrollWith } from './control/scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,8 +7,12 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from 'react-i18next';
 import {
   TwitterTimeLine,
-  Footer,
+  SideBar,
+  Footer
 } from './widgets';
+import $ from 'jquery';
+import { getTheme, checkDarkMode } from './control/dark';
+import { selectNavi, switchLang } from './widgets/NavigationBlock';
 
 function ToDoList({num, status}) {
   let list = [];
@@ -28,16 +32,22 @@ function ToDoList({num, status}) {
   );
 }
 
-function HomeScreen({route, navigation, theme}) {
+function HomeScreen() {
   const avatar = require("../assets/avatar.jpg");
   const sections = ["Welcome", "Accounts", "ToDo-List"];
   const todo_status = ["complete", "pend", "complete", "complete", "pend", "pend", "pend", "pend", "pend", "stop", "complete", "progress", "pend", "pend", "progress", "progress"];
   const { t, i18n } = useTranslation();
   scrollWith(sections);
+  useEffect(() => {
+    selectNavi('home');
+    switchLang(i18n.language);
+    checkDarkMode();
+  }, []);
+  $('a[href^=http]').attr("target", "_blank");
   return (
     <div>
       <div className="twitter-tl" id="twitter-tl" >
-        <TwitterTimeLine name="remisiki" theme={theme} />
+        <TwitterTimeLine name="remisiki" theme={getTheme} />
       </div>
 
       <div id="content" className="wrapper doc">

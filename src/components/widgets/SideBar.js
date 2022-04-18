@@ -1,14 +1,14 @@
-import { useNavigation } from '@react-navigation/native';
+// import { useNavigation } from '@react-navigation/native';
 import $ from 'jquery';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 
-function SideNavi(name) {
+function SideNavi(name, section_name) {
 	const { t, i18n } = useTranslation();
 	return (
 		<li key={name}>
-			<a href={"#" + name} id={name + "Navi"}>
+			<a href={`#/${(section_name === 'home') ? '' : section_name}#${name}`} id={name + "Navi"}>
 				<span>
 					{t(name)}
 				</span>
@@ -38,13 +38,13 @@ function foldSideBar(id) {
 
 function SideBar({sections, tool = false, name}) {
 	const { t, i18n } = useTranslation();
-	const navigation = useNavigation();
+	// const navigation = useNavigation();
 	const fold = require("../../assets/fold.png");
 	const screen_width = window.innerWidth;
 	const mobile_view = (screen_width < 425);
 	var navis = [];
 	for (var i = 0; i < sections.length; i ++) {
-		navis.push(SideNavi(sections[i]));
+		navis.push(SideNavi(sections[i], name));
 	}
 	useEffect(() => {
 		if (mobile_view && $(`#sidecontent-${name}`).is(':visible')) {

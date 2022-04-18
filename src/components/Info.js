@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import style from '../assets/index.css';
 import { scrollWith } from './control/scroll';
 import $ from 'jquery';
 import { useTranslation } from 'react-i18next';
@@ -7,16 +6,20 @@ import {
   SideBar,
   Footer,
   Flag,
-  Folder,
+  Folder
 } from './widgets';
+import { checkDarkMode } from './control/dark';
+import { selectNavi, switchLang } from './widgets/NavigationBlock';
 
-function InfoScreen({route, navigation, darkModeHandler}) {
+function InfoScreen() {
   $('a[href^=http]').attr("target", "_blank");
   const { t, i18n } = useTranslation();
   const sections = ["Languages", "Programming", "Interests"];
   scrollWith(sections);
   useEffect(() => {
-    darkModeHandler();
+    selectNavi('profile');
+    switchLang(i18n.language);
+    checkDarkMode();
   }, []);
   return (
     <div>
@@ -323,7 +326,7 @@ function InfoScreen({route, navigation, darkModeHandler}) {
           </ul>
         </article>
         
-        <SideBar sections={sections} tool={true} name="info" />
+        <SideBar sections={sections} tool={true} name="profile" />
         <div className="gap"></div>
       </div>
       <Footer />

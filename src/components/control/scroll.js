@@ -1,4 +1,6 @@
 import $ from 'jquery';
+import { useEffect } from 'react';
+import { useLocation } from "react-router-dom";
 
 function scrollWith(sections) {
   window.onscroll = function() {
@@ -9,7 +11,13 @@ function scrollWith(sections) {
 function naviChanger(sections) {
   const y = document.documentElement.scrollTop;
   const h = document.documentElement.clientHeight;
-  $('.totop').toggleClass('slide-in', y > h)
+  const top_btn = document.getElementById('totop');
+  if (y > h) {
+    top_btn.style.bottom = '1%';
+  }
+  else {
+    top_btn.style.bottom = '-90px';
+  }
   for (let i = 0; i < sections.length; i++) {
     const section = "#" + sections[i];
     const section_next = "#" + sections[i + 1];
@@ -31,4 +39,23 @@ function naviChanger(sections) {
   }
 }
 
-export {scrollWith};
+function ScrollHandler() {
+  const { pathname, hash, key } = useLocation();
+  useEffect(() => {
+    if (hash === '') {
+      window.scrollTo(0, 0);
+    }
+    else {
+      setTimeout(() => {
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView();
+        }
+      }, 0);
+    }
+  }, [pathname, hash, key]);
+  return (<></>);
+}
+
+export { scrollWith, ScrollHandler };

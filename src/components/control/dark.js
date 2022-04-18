@@ -46,7 +46,7 @@ function checkDarkMode() {
     window.matchMedia &&
     window.matchMedia('(prefers-color-scheme: dark)').matches
   ) {
-      $('#moon').addClass('title-selected');
+    $('#moon').addClass('title-selected');
     toggleDarkMode();
   }
 }

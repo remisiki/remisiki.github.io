@@ -742,7 +742,7 @@ dd.error {
 }
 
 aside a[href^="http"]:after,.doc a[href^="http"]:after {
-    content: url(./external.png);
+    content: url(../public/external.png);
     vertical-align: middle;
     margin-left: 5px;
 }
@@ -757,7 +757,8 @@ aside a[href^="http"]:after,.doc a[href^="http"]:after {
     display: none;
 }
 
-.totop {
+#totop {
+    content: url(./assets/page-top.webp);
     z-index: 1;
     position: fixed;
     right: 5%;
@@ -769,14 +770,15 @@ aside a[href^="http"]:after,.doc a[href^="http"]:after {
     transition: filter 0.3s ease-in-out, height 0.1s ease-in-out, opacity 0.1s ease-in-out, bottom 0.1s;
     opacity: 0.8;
     /*display: none;*/
+    cursor: pointer;
 }
 
-.totop:hover {
+#totop:hover {
     filter: drop-shadow(5px 5px 5px #333);
     opacity: 1;
 }
 
-.totop:active {
+#totop:active {
     height: 88px;
 }
 

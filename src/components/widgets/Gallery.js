@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import $ from 'jquery';
-import { get } from '../http/request';
 import { useTranslation } from 'react-i18next';
 
 function Img({src, handler, index}) {
@@ -16,7 +14,7 @@ function Img({src, handler, index}) {
 function ViewSource({src}) {
   const { t, i18n } = useTranslation();
   return (
-    <a href={src} className="original" onClick={(e) => e.stopPropagation()} target="_blank">
+    <a href={src} className="original" onClick={(e) => e.stopPropagation()} target="_blank" rel="noreferrer">
       {t("Original")}
     </a>
   );

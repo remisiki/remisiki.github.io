@@ -3,7 +3,7 @@ function Footer() {
 	return (
 		<footer>
 			<div id="foot-logo">
-				<img src={logo} className="logo" />
+				<img src={logo} className="logo" alt="logo" />
 			</div>
 			<span>
 				&copy; 2022 Remisiki

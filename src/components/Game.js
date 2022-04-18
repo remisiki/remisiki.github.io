@@ -5,7 +5,6 @@ import YouTube from 'react-youtube';
 import { Img, ViewSource, Description } from './widgets/Gallery';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import $ from 'jquery';
 import photos from './config/photo_wall.json';
 import { KeyMapper } from './control/keyboard';
 import {
@@ -21,7 +20,6 @@ function GameScreen() {
   const { t, i18n } = useTranslation();
   const sections = ["Touhou", "CAVE", "Hollow-Knight"];
   const length = photos.length;
-  const arrow = require("../assets/fold.png");
   let [state, setState] = useState('out');
   let [photo_index, setPhotoIndex] = useState(0);
   const stateHandler = (state) => {

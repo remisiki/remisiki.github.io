@@ -6,9 +6,9 @@ function unfold(id) {
 
 function Folder({name, id}) {
   return (
-    <a onClick={() => unfold(id)} className="fold">
+    <span onClick={() => unfold(id)} className="no-href-a">
       {name}
-    </a>
+    </span>
   );
 }
 

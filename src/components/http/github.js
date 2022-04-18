@@ -9,7 +9,7 @@ async function mostUsedLanguage() {
     repos.push(repo_api + repo.name + "/languages");
   }
   language_data = await Promise.all(repos.map(repo => get(repo)));
-  let languages = new Set;
+  let languages = new Set();
   for (const item of language_data) {
     for (const key of Object.keys(item)) {
       languages.add(key);
@@ -17,7 +17,6 @@ async function mostUsedLanguage() {
   }
   languages.delete("Jupyter Notebook");
   let sortable_data = [];
-  let sum = 0;
   for (const key of languages) {
     for (const item of language_data) {
       if (item[key]) {
@@ -27,7 +26,6 @@ async function mostUsedLanguage() {
         else {
           sortable_data[key] = item[key];
         }
-        sum += item[key];
       }
       else {
 
@@ -37,7 +35,7 @@ async function mostUsedLanguage() {
   sortable_data = Object.keys(sortable_data).map(
     (key) => ({ 
       key: key, 
-      value: sortable_data[key]// * 100 / sum
+      value: sortable_data[key]
     })
   );
   sortable_data.sort((a,b) => {

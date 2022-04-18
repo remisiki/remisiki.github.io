@@ -58,13 +58,12 @@ function Menu() {
 
 function NavigationBlock({name}) {
   const { t, i18n } = useTranslation();
-  let [ menu, setMenu ] = useState(false);
   const logo = require("../../assets/favicon.png");
   return (
     <div className="wrapper nav-block">
       <div className="left-container">
         <div id="head-logo">
-          <img src={logo} className="logo" />
+          <img src={logo} className="logo" alt="logo" />
         </div>
         <div
           className="title-left menu-btn" 

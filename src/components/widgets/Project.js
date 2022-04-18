@@ -11,7 +11,7 @@ function Project({name, description, href, thumb, lang}) {
   return (
     <a className="cell" href={href}>
       <div className="img-container">
-        <img src={thumbnail} />
+        <img src={thumbnail} alt={description} />
       </div>
       <span className="title">{name}</span>
       <br />

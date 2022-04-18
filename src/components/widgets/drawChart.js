@@ -1,5 +1,4 @@
 import * as d3 from "d3";
-import $ from 'jquery';
 import cmap from '../config/cmap.json';
 
 const drawChart = (element, data) => {
@@ -74,7 +73,7 @@ const drawChart = (element, data) => {
       if (index <= 2) {
         return `${d.data.key}`;
       }
-      else if (index == data.length - 1) {
+      else if (index === data.length - 1) {
         return `...`;
       }
       else return ``;

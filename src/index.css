@@ -1199,9 +1199,14 @@ html {
     display: none;
 }
 
-.fold {
+.no-href-a {
     user-select: none;
     cursor: pointer;
+    color: #2083e0;
+}
+
+.no-href-a:hover {
+    color: #0060bb;
 }
 
 .border-text {

@@ -37,7 +37,7 @@ function themeIsDark() {
 
 function checkDarkMode() {
   const dark_prefer = localStorage.getItem('dark_prefer')
-  if (dark_prefer == "true") {
+  if (dark_prefer === "true") {
       $('#moon').addClass('title-selected');
       toggleDarkMode();
   }

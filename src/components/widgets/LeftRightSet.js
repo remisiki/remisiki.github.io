@@ -22,6 +22,7 @@ function LeftRightSet({style, leftPosition, rightPosition, leftClickHandler, rig
             height: 30,
             filter: "brightness(0) invert(1)"
           }} 
+          alt="previous"
         />
       </div>
       {text}
@@ -45,6 +46,7 @@ function LeftRightSet({style, leftPosition, rightPosition, leftClickHandler, rig
             height: 30,
             filter: "brightness(0) invert(1)"
           }} 
+          alt="next"
         />
       </div>
     </div>

@@ -3,10 +3,8 @@ import { scrollWith } from './control/scroll';
 import $ from 'jquery';
 import { mostUsedLanguage } from './http/github';
 import {
-  SideBar,
   Chart,
   List,
-  Box,
   Footer,
   Project,
 } from './widgets';

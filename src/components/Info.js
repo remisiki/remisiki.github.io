@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { scrollWith } from './control/scroll';
 import $ from 'jquery';
 import { useTranslation } from 'react-i18next';

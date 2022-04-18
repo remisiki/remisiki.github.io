@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { scrollWith } from './control/scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import brands from '@fortawesome/fontawesome-free-brands';

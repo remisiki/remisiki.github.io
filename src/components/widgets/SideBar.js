@@ -23,8 +23,8 @@ function ToolBar() {
 		<>
 			<h3>{t("Tools")}</h3>
 			<ul>
-				<li><a onClick={() => $('.fold-block').show()} style={{cursor: "pointer"}}>{t("Expand")}</a></li>
-				<li><a onClick={() => $('.fold-block').hide()} style={{cursor: "pointer"}}>{t("Fold")}</a></li>
+				<li><span onClick={() => $('.fold-block').show()} className="no-href-a">{t("Expand")}</span></li>
+				<li><span onClick={() => $('.fold-block').hide()} className="no-href-a">{t("Fold")}</span></li>
 			</ul>
 		</>
 	);
@@ -57,7 +57,7 @@ function SideBar({sections, tool = false, name}) {
 			{mobile_view &&
 		        <div onClick={() => foldSideBar(name)}>
 		          <div>
-			          <img src={fold} id={`foldpng-${name}`} className="foldpng" />
+			          <img src={fold} id={`foldpng-${name}`} className="foldpng" alt="" />
 		          </div>
 		        </div>
 		    }

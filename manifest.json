@@ -1,25 +1,15 @@
 {
-  "display": "standalone",
-  "lang": "en",
-  "name": "れみしきのへや",
   "short_name": "れみしきのへや",
-  "start_url": "/?utm_source=web_app_manifest",
-  "orientation": "portrait",
+  "name": "れみしきのへや",
   "icons": [
     {
-      "src": "\\pwa\\chrome-icon\\chrome-icon-144.png",
-      "sizes": "144x144",
-      "type": "image/png"
-    },
-    {
-      "src": "\\pwa\\chrome-icon\\chrome-icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "\\pwa\\chrome-icon\\chrome-icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
     }
-  ]
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#375899",
+  "background_color": "#708090"
 }

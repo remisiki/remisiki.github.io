@@ -12,7 +12,6 @@ import { checkDarkMode } from './control/dark';
 import { selectNavi, switchLang } from './widgets/NavigationBlock';
 
 function InfoScreen() {
-  $('a[href^=http]').attr("target", "_blank");
   const { t, i18n } = useTranslation();
   const sections = ["Languages", "Programming", "Interests"];
   scrollWith(sections);

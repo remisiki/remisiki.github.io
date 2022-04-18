@@ -41,8 +41,8 @@ function HomeScreen() {
     selectNavi('home');
     switchLang(i18n.language);
     checkDarkMode();
+    $('a[href^=http]').attr("target", "_blank");
   }, []);
-  $('a[href^=http]').attr("target", "_blank");
   return (
     <div>
       <div className="twitter-tl" id="twitter-tl" >

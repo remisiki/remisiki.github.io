@@ -14,7 +14,6 @@ import { selectNavi, switchLang } from './widgets/NavigationBlock';
 
 function ReposScreen() {
   const { t, i18n } = useTranslation();
-  $('a[href^=http]').attr("target", "_blank");
   let [lists, setLists] = useState(false);
   useEffect(() => {
     selectNavi('project');
@@ -25,6 +24,7 @@ function ReposScreen() {
       setLists(res);
     }
     fetchGithubData();
+    $('a[href^=http]').attr("target", "_blank");
     window.scrollTo(0, 0);
   }, [])
   scrollWith([]);

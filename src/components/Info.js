@@ -1,6 +1,4 @@
 import React, { useEffect } from 'react';
-import { scrollWith } from './control/scroll';
-import $ from 'jquery';
 import { useTranslation } from 'react-i18next';
 import {
   SideBar,
@@ -14,7 +12,6 @@ import { selectNavi, switchLang } from './widgets/NavigationBlock';
 function InfoScreen() {
   const { t, i18n } = useTranslation();
   const sections = ["Languages", "Programming", "Interests"];
-  scrollWith(sections);
   useEffect(() => {
     selectNavi('profile');
     switchLang(i18n.language);
@@ -325,7 +322,7 @@ function InfoScreen() {
           </ul>
         </article>
         
-        <SideBar sections={sections} tool={true} name="profile" />
+        <SideBar sections={sections} tool={true} path="profile" />
         <div className="gap"></div>
       </div>
       <Footer />

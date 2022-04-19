@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { scrollWith } from './control/scroll';
-import $ from 'jquery';
 import { mostUsedLanguage } from './http/github';
 import {
   Chart,
@@ -24,7 +23,10 @@ function ReposScreen() {
       setLists(res);
     }
     fetchGithubData();
-    $('a[href^=http]').attr("target", "_blank");
+    const external_links = document.querySelectorAll('a[href^=http]');
+    for (const link of external_links) {
+      link.setAttribute('target', '_blank');
+    }
     window.scrollTo(0, 0);
   }, [])
   scrollWith([]);

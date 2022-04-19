@@ -67,9 +67,7 @@ function App() {
           />
         </Switch>
       </HashRouter>
-      <div onClick={() => {window.scrollTo(0, 0);}} >
-        <img id="totop" alt="go to page top" />
-      </div>
+      <img id="totop" alt="go to page top" onClick={() => {window.scrollTo(0, 0);}} />
     </>
   );
 }

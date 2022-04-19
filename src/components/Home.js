@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { scrollWith } from './control/scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import brands from '@fortawesome/fontawesome-free-brands';
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -9,7 +8,6 @@ import {
   SideBar,
   Footer
 } from './widgets';
-import $ from 'jquery';
 import { getTheme, checkDarkMode } from './control/dark';
 import { selectNavi, switchLang } from './widgets/NavigationBlock';
 
@@ -36,12 +34,14 @@ function HomeScreen() {
   const sections = ["Welcome", "Accounts", "ToDo-List"];
   const todo_status = ["complete", "pend", "complete", "complete", "pend", "pend", "pend", "pend", "pend", "stop", "complete", "progress", "pend", "pend", "progress", "progress"];
   const { t, i18n } = useTranslation();
-  scrollWith(sections);
   useEffect(() => {
     selectNavi('home');
     switchLang(i18n.language);
     checkDarkMode();
-    $('a[href^=http]').attr("target", "_blank");
+    const external_links = document.querySelectorAll('a[href^=http]');
+    for (const link of external_links) {
+      link.setAttribute('target', '_blank');
+    }
   }, []);
   return (
     <div>
@@ -112,7 +112,7 @@ function HomeScreen() {
             <ToDoList num={16} status={todo_status} />
           </ul>
         </article>
-        <SideBar sections={sections} name="home" />
+        <SideBar sections={sections} path="home" />
         <div className="gap"></div>
         
       </div>

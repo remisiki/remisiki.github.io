@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import $ from 'jquery';
 
 function KeyMapper({leftClickHandler, rightClickHandler, escapeHandler}) {
   function handleKeyDown(event) {
@@ -21,7 +20,7 @@ function KeyMapper({leftClickHandler, rightClickHandler, escapeHandler}) {
     }
   }
   useEffect(() => {
-    $('#keymap').focus();
+    document.getElementById('keymap').focus();
   }, []);
   return (
     <div tabIndex={0} onKeyDown={(e) => handleKeyDown(e)} id="keymap"></div>

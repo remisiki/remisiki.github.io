@@ -796,13 +796,13 @@ body {
     transition: background-color 0.3s ease-in-out;
 }
 
-.dark-body {
-    background-color: #22272e!important;
-}
-
 .dark-content {
     background-color: rgba(48, 56, 65, 1.0)!important;
     color: #eee!important;
+}
+
+body.dark-content {
+    background-color: #22272e;
 }
 
 .wrapper article, .twitter-tl, .cell, .wrapper aside {
@@ -826,7 +826,7 @@ body {
     height: 10vh;
 }
 
-.foldpng {
+.fold-png {
     position: absolute;
     top: 5%;
     right: 5%;
@@ -869,7 +869,7 @@ html {
     background: linear-gradient(transparent 60%, #ff9 60%);
 }
 
-.yellow-marker-thin-dark {
+.yellow-marker-thin.dark-content {
     /*background: linear-gradient(transparent 60%, rgba(255, 255, 153, 0.4) 60%);*/
     background: linear-gradient(transparent 60%, rgba(13, 225, 189, 0.4) 60%);
 }

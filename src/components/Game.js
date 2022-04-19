@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { scrollWith } from './control/scroll';
 import { useTranslation } from 'react-i18next';
 import YouTube from 'react-youtube';
 import { Img, ViewSource, Description } from './widgets/Gallery';
@@ -41,7 +40,6 @@ function GameScreen() {
       leftClickHandler();
     }
   }
-  scrollWith(sections);
   useEffect(() => {
     selectNavi('game');
     switchLang(i18n.language);
@@ -215,7 +213,7 @@ function GameScreen() {
             }}
           />
         </article>
-        <SideBar sections={sections} name="game" />
+        <SideBar sections={sections} path="game" />
         <div className="gap"></div>
       </div>
       <div className="photo_container">

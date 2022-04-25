@@ -1,58 +1,58 @@
 {
-    "C": {
-        "color": "#555555",
-        "text": "#eee"
-    },
-    "C++": {
-        "color": "#f34b7d",
-        "text": "#eee"
-    },
-    "Java": {
-        "color": "#b07219",
-        "text": "#eee"
-    },
-    "JavaScript": {
-        "color": "#f1e05a",
-        "text": "#323330"
-    },
-    "Python": {
-        "color": "#3572A5",
-        "text": "#eee"
-    },
-    "Verilog": {
-        "color": "#b2b7f8",
-        "text": "#eee"
-    },
-    "Scala": {
-        "color": "#c22d40",
-        "text": "#eee"
-    },
-    "Assembly": {
-        "color": "#6E4C13",
-        "text": "#eee"
-    },
-    "HTML": {
-        "color": "#e34c26",
-        "text": "#eee"
-    },
-    "CSS": {
-        "color": "#563d7c",
-        "text": "#eee"
-    },
-    "TypeScript": {
-        "color": "#2b7489",
-        "text": "#eee"
-    },
-    "Shell": {
-        "color": "#89e051",
-        "text": "#eee"
-    },
-    "Batchfile": {
-        "color": "#C1F12E",
-        "text": "#323330"
-    },
-    "Pascal": {
-        "color": "#E3F171",
-        "text": "#323330"
-    }
+	"C": {
+		"color": "#555555",
+		"text": "#eee"
+	},
+	"C++": {
+		"color": "#f34b7d",
+		"text": "#eee"
+	},
+	"Java": {
+		"color": "#b07219",
+		"text": "#eee"
+	},
+	"JavaScript": {
+		"color": "#f1e05a",
+		"text": "#323330"
+	},
+	"Python": {
+		"color": "#3572A5",
+		"text": "#eee"
+	},
+	"Verilog": {
+		"color": "#b2b7f8",
+		"text": "#eee"
+	},
+	"Scala": {
+		"color": "#c22d40",
+		"text": "#eee"
+	},
+	"Assembly": {
+		"color": "#6E4C13",
+		"text": "#eee"
+	},
+	"HTML": {
+		"color": "#e34c26",
+		"text": "#eee"
+	},
+	"CSS": {
+		"color": "#563d7c",
+		"text": "#eee"
+	},
+	"TypeScript": {
+		"color": "#2b7489",
+		"text": "#eee"
+	},
+	"Shell": {
+		"color": "#89e051",
+		"text": "#eee"
+	},
+	"Batchfile": {
+		"color": "#C1F12E",
+		"text": "#323330"
+	},
+	"Pascal": {
+		"color": "#E3F171",
+		"text": "#323330"
+	}
 }

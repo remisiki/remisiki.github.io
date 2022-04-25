@@ -85,7 +85,7 @@ function SideBar({sections, tool = false, path}) {
 		scrollWith(sections);
 	}, []);
 	return (
-		<aside className="sidebar" id="sidebar">
+		<aside className="sidebar float" id="sidebar">
 			{mobile_view &&
         <div onClick={() => foldSideBar()}>
           <div>

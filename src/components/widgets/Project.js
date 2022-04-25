@@ -9,7 +9,7 @@ function Project({name, description, href, thumb, lang}) {
 		thumbnail = require(`../../assets/${thumb}.webp`);
 	}
 	return (
-		<a className="cell" href={href}>
+		<a className="cell float" href={href}>
 			<div className="img-container">
 				<img src={thumbnail} alt={description} />
 			</div>

@@ -47,12 +47,12 @@ function GameScreen() {
 	}, []);
 	return (
 		<div>
-			<div className="twitter-tl" id="twitter-tl" >
+			<div className="twitter-tl float" id="twitter-tl" >
 				<TwitterTimeLine name="mukei_stg" theme={getTheme} />
 			</div>
 
 			<div id="content" className="wrapper doc">
-				<article>
+				<article className="float">
 					<h1>{t("gmh")}</h1>
 					<h2 id={sections[0]}>
 						<span>{t("gms0")}</span>

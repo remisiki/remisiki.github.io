@@ -805,7 +805,7 @@ body.dark-content {
 	background-color: #22272e;
 }
 
-.wrapper article, .twitter-tl, .cell, .wrapper aside {
+.float {
 	border-radius: 5px;
 	background-color: rgba(255, 255, 255, 0.9);
 	padding: 10px;
@@ -815,7 +815,7 @@ body.dark-content {
 	transition: box-shadow 0.2s ease-in-out, -moz-box-shadow 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
 }
 
-.wrapper article:hover, .twitter-tl:hover, .cell:hover, .wrapper aside:hover {
+.float:hover {
 	box-shadow: 2px 2px 20px rgba(0,0,0,0.6);
 	-moz-box-shadow: 2px 2px 20px rgba(0,0,0,0.6);
 	-webkit-box-shadow: 2px 2px 20px rgba(0,0,0,0.6);

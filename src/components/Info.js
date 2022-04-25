@@ -20,7 +20,7 @@ function InfoScreen() {
 	return (
 		<div>
 			<div id="content" className="wrapper doc">
-				<article>
+				<article className="float">
 					<h1>{t("ifh")}</h1>
 					<p>{t("ifp0")}</p>
 					<p><span className="yellow-marker-thin">{t("ifp1")}</span></p>

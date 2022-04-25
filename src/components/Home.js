@@ -45,19 +45,19 @@ function HomeScreen() {
 	}, []);
 	return (
 		<div>
-			<div className="twitter-tl" id="twitter-tl" >
+			<div className="twitter-tl float" id="twitter-tl" >
 				<TwitterTimeLine name="remisiki" theme={getTheme} />
 			</div>
 
 			<div id="content" className="wrapper doc">
-				<article id={sections[0]}>
+				<article id={sections[0]} className="float">
 					<img src={avatar} alt="Furan" id="avatar" />
 					<h1>{t("hms0t")}</h1>
 					<p>{t("hms0p0p0")}<a href="https://ja.reactjs.org/">React.js</a>{t("hms0p0p1")}</p>
 					<p>{t("hms0p1")}</p>
 					<p>{t("hms0p3p0")}<a href="https://www.pixiv.net/artworks/28137362">{t("hms0p3p1")}</a>{t("hms0p3p2")}</p>
 				</article>
-				<article id={sections[1]}>
+				<article id={sections[1]} className="float">
 					<h1>{t("hms1t")}</h1>
 					<p>
 						<FontAwesomeIcon icon="fa-brands fa-twitter" />
@@ -101,7 +101,7 @@ function HomeScreen() {
 					</p>
 					<p>{t("hms1p8p0")}<span className="yellow-marker-thin">{t("hms1p8p1")}</span>{t("hms1p8p2")}</p>
 				</article>
-				<article id={sections[2]}>
+				<article id={sections[2]} className="float">
 					<h1>
 						{t("todo")}
 					</h1>

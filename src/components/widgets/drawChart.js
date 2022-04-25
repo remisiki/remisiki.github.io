@@ -70,7 +70,7 @@ const drawChart = (element, data) => {
 		.attr("text-anchor", "middle")
 		.text((d) => {
 			const index = data.findIndex(({key}) => key === d.data.key);
-			if (index <= 2) {
+			if (index <= 3) {
 				return `${d.data.key}`;
 			}
 			else if (index === data.length - 1) {

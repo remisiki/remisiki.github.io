@@ -32,7 +32,7 @@ function ToDoList({num, status}) {
 function HomeScreen() {
 	const avatar = require("../assets/avatar.jpg");
 	const sections = ["Welcome", "Accounts", "ToDo-List"];
-	const todo_status = ["complete", "pend", "complete", "complete", "pend", "pend", "pend", "pend", "pend", "stop", "complete", "progress", "pend", "pend", "progress", "progress"];
+	const todo_status = ["complete", "pend", "complete", "complete", "pend", "pend", "pend", "pend", "pend", "stop", "complete", "stop", "pend", "pend", "stop", "stop", "progress"];
 	const { t, i18n } = useTranslation();
 	useEffect(() => {
 		selectNavi('home');
@@ -109,7 +109,7 @@ function HomeScreen() {
 						{t("todot")}
 					</p>
 					<ul>
-						<ToDoList num={16} status={todo_status} />
+						<ToDoList num={17} status={todo_status} />
 					</ul>
 				</article>
 				<SideBar sections={sections} path="home" />

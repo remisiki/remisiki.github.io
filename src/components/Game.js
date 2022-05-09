@@ -48,7 +48,7 @@ function GameScreen() {
 	return (
 		<div>
 			<div className="twitter-tl float" id="twitter-tl" >
-				<TwitterTimeLine name="mukei_stg" theme={getTheme} />
+				<TwitterTimeLine name="remisiki_stg" theme={getTheme} />
 			</div>
 
 			<div id="content" className="wrapper doc">

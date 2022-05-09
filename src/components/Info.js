@@ -139,8 +139,8 @@ function InfoScreen() {
 						</li>
 						<li>
 							<Folder name="Scala" id="scala" />
-							<div className="fold-block" id="scala"> <p className="red-text">
-									{t("bad")}
+							<div className="fold-block" id="scala"> <p className="brown-text">
+									{t("futuu")}
 								</p>
 								<p>
 									{t("scala")}

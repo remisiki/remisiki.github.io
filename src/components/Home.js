@@ -32,7 +32,7 @@ function ToDoList({num, status}) {
 function HomeScreen() {
 	const avatar = require("../assets/avatar.jpg");
 	const sections = ["Welcome", "Accounts", "ToDo-List"];
-	const todo_status = ["complete", "pend", "complete", "complete", "pend", "pend", "pend", "pend", "pend", "stop", "complete", "stop", "pend", "pend", "stop", "stop", "progress"];
+	const todo_status = ["complete", "pend", "complete", "complete", "pend", "pend", "pend", "pend", "pend", "stop", "complete", "stop", "pend", "pend", "stop", "stop", "complete"];
 	const { t, i18n } = useTranslation();
 	useEffect(() => {
 		selectNavi('home');
@@ -77,7 +77,7 @@ function HomeScreen() {
 					<p>
 						<FontAwesomeIcon icon="fa-brands fa-twitter" />
 						&ensp;{t("hms1p3")}&ensp;
-						<a href="https://twitter.com/mukei_stg">@mukei_stg</a>
+						<a href="https://twitter.com/remisiki_stg">@remisiki_stg</a>
 					</p>
 					<p>
 						<FontAwesomeIcon icon="fa-brands fa-discord" />

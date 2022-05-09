@@ -221,6 +221,11 @@
 	"hms1p7": "E-Mail:",
 	"hms1p8p0": "I use Twitter and Telegram quite often for private messages. ",
 	"hms1p8p1": "Be careful that there may be not-safe-for-work retweets in my Twitter for game account!",
-	"hms1p8p2": "　Feel free to add me on Steam, Discord and visit my Youtube channel to discover my gaming process!"
+	"hms1p8p2": "　Feel free to add me on Steam, Discord and visit my Youtube channel to discover my gaming process!",
+	"language": "Language",
+	"theme": "Color Theme",
+	"light": "Light",
+	"dark": "Dark",
+	"auto": "System"
 
 }

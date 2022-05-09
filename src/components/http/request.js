@@ -1,4 +1,3 @@
-import CryptoJS from 'crypto-js';
 import axios from 'axios';
 
 function getHelper(url, headers) {
@@ -12,10 +11,10 @@ function getHelper(url, headers) {
 async function get(url) {
 	/* This token is for public only, just to prevent Github from detecting it.
 	So useless even if someone steals it lol. */
-	const decrypted = CryptoJS.AES.decrypt("U2FsdGVkX1+vCdRBoY9RqKuSOZ8NTXPO/RyH0GC0HSx404oJ1/kRQsfPNHcWS28VYZtGVaSVxF2liRy1bzVqAw==", "114514").toString(CryptoJS.enc.Utf8);
+	const token = window.atob('Z2hwXzE5M3VWU283R0xkTE5ZMlFMRkp5TkRScnpqS25MWDRZTHBTYg==');
 	const headers = {
 		headers: {
-			'Authorization': `Bearer ${decrypted}`
+			'Authorization': `Bearer ${token}`
 		}
 	};
 	const res = await getHelper(url, headers);

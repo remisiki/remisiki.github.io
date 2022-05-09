@@ -12,8 +12,8 @@ import {
 	Footer,
 	LeftRightSet,
 } from './widgets';
-import { getTheme, checkDarkMode } from './control/dark';
-import { selectNavi, switchLang } from './widgets/NavigationBlock';
+import { getTheme } from './control/dark';
+import { selectNavi } from './widgets/NavigationBlock';
 
 function GameScreen() {
 	const { t, i18n } = useTranslation();
@@ -42,8 +42,6 @@ function GameScreen() {
 	}
 	useEffect(() => {
 		selectNavi('game');
-		switchLang(i18n.language);
-		checkDarkMode();
 	}, []);
 	return (
 		<div>

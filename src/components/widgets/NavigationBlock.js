@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { useTranslation } from 'react-i18next';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoon } from "@fortawesome/free-solid-svg-icons";
-import { toggleDarkMode } from '../control/dark';
+import { createSettingBar, hideSideBar } from './SettingBar';
 
 function navigate(path) {
 	return (() => {
+		hideSideBar();
 		window.location.href = `#/${(path === 'home') ? '' : path}`;
 		window.scrollTo(0, 0);
 		selectNavi(path);
@@ -13,7 +12,7 @@ function navigate(path) {
 	);
 }
 
-function selectNavi(path) {
+export function selectNavi(path) {
 	const navi_items = document.getElementsByClassName('title-center');
 	const menu_items = document.getElementsByClassName('menu-item');
 	const menu_btn = document.getElementById('menu');
@@ -39,19 +38,6 @@ function selectNavi(path) {
 	menu_block.style.display = '';
 }
 
-function switchLang(lang) {
-	const navi_langs = document.querySelectorAll('.title-right:not(#moon)');
-	
-	for (const navi_lang of navi_langs) {
-		if (navi_lang?.id && (navi_lang.id === lang)) {
-			navi_lang.classList?.add('title-selected');
-		}
-		else {
-			navi_lang?.classList?.remove('title-selected');
-		}
-	}
-}
-
 function Menu() {
 	const { t, i18n } = useTranslation();
 	return (
@@ -72,15 +58,15 @@ function Menu() {
 	);
 }
 
-function NavigationBlock({name}) {
+export function NavigationBlock({setTheme}) {
 	const { t, i18n } = useTranslation();
-	const logo = require("../../assets/favicon.png");
+	// const logo = require("../../assets/favicon.png");
 	return (
 		<div className="wrapper nav-block">
 			<div className="left-container">
-				<div id="head-logo">
+				{/*<div id="head-logo">
 					<img src={logo} className="logo" alt="logo" />
-				</div>
+				</div>*/}
 				<div
 					className="title-left menu-btn" 
 					onClick={() => {
@@ -114,30 +100,9 @@ function NavigationBlock({name}) {
 				</div>
 			</div>
 			<div className="right-action-container">
-				<div 
-					className="title-right" 
-					onClick={()=>{
-						const moon = document.getElementById('moon');
-						moon.classList.toggle('title-selected'); 
-						localStorage.setItem('dark_prefer', moon.classList.contains('title-selected'));
-						toggleDarkMode(); 
-					}} 
-					id="moon"
-				>
-					<FontAwesomeIcon icon={faMoon} />
-				</div>
-				<div className="title-right" onClick={()=>{ i18n.changeLanguage('en'); switchLang("en"); }} id="en">
-					E
-				</div>
-				<div className="title-right" onClick={()=>{ i18n.changeLanguage('ja'); switchLang("ja"); }} id="ja">
-					あ
-				</div>
-				<div className="title-right" onClick={()=>{ i18n.changeLanguage('zh'); switchLang("zh"); }} id="zh">
-					中
+				<div className="title-right" onClick={() => createSettingBar(setTheme, t, i18n)} id="title-right-setting">
 				</div>
 			</div>
 		</div>
 	);
 }
-
-export { NavigationBlock, selectNavi, switchLang };

@@ -13,7 +13,7 @@ function encode(str) {
 	}
 }
 
-function Box({ lang = "C++", text, width = '16px', height = '16px' }) {
+function Box({ lang = "C++", text, width = '15px', height = '15px' }) {
 	let color = "#555555";
 	let text_color = "#eee";
 	try {
@@ -30,6 +30,7 @@ function Box({ lang = "C++", text, width = '16px', height = '16px' }) {
 	style.type = 'text/css';
 	style.innerHTML = `.box${encode(lang) + name_fix} { 
 		color: ${text_color};
+		vertical-align: middle;
 		font-weight: bold;
 		text-align: center;
 		background-color: ${color}; 

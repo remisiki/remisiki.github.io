@@ -8,8 +8,8 @@ import {
 	SideBar,
 	Footer
 } from './widgets';
-import { getTheme, checkDarkMode } from './control/dark';
-import { selectNavi, switchLang } from './widgets/NavigationBlock';
+import { getTheme } from './control/dark';
+import { selectNavi } from './widgets/NavigationBlock';
 
 function ToDoList({num, status}) {
 	let list = [];
@@ -36,8 +36,6 @@ function HomeScreen() {
 	const { t, i18n } = useTranslation();
 	useEffect(() => {
 		selectNavi('home');
-		switchLang(i18n.language);
-		checkDarkMode();
 		const external_links = document.querySelectorAll('a[href^=http]');
 		for (const link of external_links) {
 			link.setAttribute('target', '_blank');

@@ -8,16 +8,13 @@ import {
 	Project,
 } from './widgets';
 import { useTranslation } from 'react-i18next';
-import { checkDarkMode } from './control/dark';
-import { selectNavi, switchLang } from './widgets/NavigationBlock';
+import { selectNavi } from './widgets/NavigationBlock';
 
 function ReposScreen() {
 	const { t, i18n } = useTranslation();
 	let [lists, setLists] = useState(false);
 	useEffect(() => {
 		selectNavi('project');
-		switchLang(i18n.language);
-		checkDarkMode();
 		async function fetchGithubData() {
 			const res = await mostUsedLanguage();
 			setLists(res);

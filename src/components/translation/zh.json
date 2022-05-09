@@ -221,6 +221,11 @@
 	"hms1p7": "電子郵箱",
 	"hms1p8p0": "平時聊天比較常用Twitter和Telegram。",
 	"hms1p8p1": "遊戲用Twitter賬號可能會轉推一些NSFW内容，需要注意。",
-	"hms1p8p2": "歡迎在Discord和Steam上添加好友或是訂閲我的YouTube頻道！"
+	"hms1p8p2": "歡迎在Discord和Steam上添加好友或是訂閲我的YouTube頻道！",
+	"language": "語言",
+	"theme": "主題顔色",
+	"light": "淺色模式",
+	"dark": "深色模式",
+	"auto": "系統預設"
 
 }

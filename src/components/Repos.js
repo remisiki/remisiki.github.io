@@ -8,16 +8,13 @@ import {
 	Project,
 } from './widgets';
 import { useTranslation } from 'react-i18next';
-import { checkDarkMode } from './control/dark';
-import { selectNavi, switchLang } from './widgets/NavigationBlock';
+import { selectNavi } from './widgets/NavigationBlock';
 
 function ReposScreen() {
 	const { t, i18n } = useTranslation();
 	let [lists, setLists] = useState(false);
 	useEffect(() => {
 		selectNavi('project');
-		switchLang(i18n.language);
-		checkDarkMode();
 		async function fetchGithubData() {
 			const res = await mostUsedLanguage();
 			setLists(res);
@@ -40,7 +37,7 @@ function ReposScreen() {
 					<Project name="kettyan-bot" description={t("proj1")} href="https://remisiki.github.io/kettyan-bot/" thumb="ket" lang="Python" />
 					<Project name="k-gatya" description={t("proj4")} href="https://remisiki.github.io/k-gatya/" thumb="keg" lang="JavaScript" />
 					<Project name="remiqq" description={t("proj5")} href="https://github.com/remisiki/remiqq" thumb="electron" lang="JavaScript" />
-					<Project name="lan-server" description={t("proj6")} href="https://github.com/remisiki/lan-server" thumb="play" lang="Scala" />
+					<Project name="lan-share" description={t("proj6")} href="https://github.com/remisiki/lan-share" thumb="play" lang="Scala" />
 					<Project name="umjicanvas" description={t("proj2")} href="https://github.com/remisiki/umjicanvas" thumb="umjicanvas" lang="Java" />
 					<Project name="GMM-Demux" description={t("proj3")} href="https://gmm-demux.readthedocs.io/en/latest/" thumb="tsne" lang="Python" />
 					<Project name="ECE4710J" description={t("projji")} href="https://github.com/remisiki/ECE4710J" thumb="svm" lang="Python" />

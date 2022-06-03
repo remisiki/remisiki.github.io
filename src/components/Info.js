@@ -6,16 +6,13 @@ import {
 	Flag,
 	Folder
 } from './widgets';
-import { checkDarkMode } from './control/dark';
-import { selectNavi, switchLang } from './widgets/NavigationBlock';
+import { selectNavi } from './widgets/NavigationBlock';
 
 function InfoScreen() {
 	const { t, i18n } = useTranslation();
 	const sections = ["Languages", "Programming", "Interests"];
 	useEffect(() => {
 		selectNavi('profile');
-		switchLang(i18n.language);
-		checkDarkMode();
 	}, []);
 	return (
 		<div>
@@ -139,8 +136,8 @@ function InfoScreen() {
 						</li>
 						<li>
 							<Folder name="Scala" id="scala" />
-							<div className="fold-block" id="scala"> <p className="red-text">
-									{t("bad")}
+							<div className="fold-block" id="scala"> <p className="brown-text">
+									{t("futuu")}
 								</p>
 								<p>
 									{t("scala")}

@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import './components/translation/i18n';
 import {
 	HashRouter,
@@ -8,7 +8,7 @@ import {
 import { NavigationBlock } from './components/widgets/NavigationBlock';
 import { ScrollHandler } from './components/control/scroll';
 import { Title } from './components/control/Title';
-import './components/control/init';
+import { checkThemeMode, getTheme } from './components/control/dark';
 
 const HomeScreen = React.lazy(() => import('./components/Home'));
 const InfoScreen = React.lazy(() => import('./components/Info'));
@@ -16,11 +16,15 @@ const ReposScreen = React.lazy(() => import('./components/Repos'));
 const GameScreen = React.lazy(() => import('./components/Game'));
 
 function App() {
+	const [theme, setTheme] = useState(getTheme());
+	useEffect(() => {
+		checkThemeMode();
+	}, [theme]);
 	return (
 		<>
 			<Title />
 			<header>
-				<NavigationBlock />
+				<NavigationBlock setTheme={setTheme} />
 			</header>
 			<HashRouter>
 				<ScrollHandler />

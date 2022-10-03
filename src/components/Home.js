@@ -11,10 +11,10 @@ import {
 import { getTheme } from './control/dark';
 import { selectNavi } from './widgets/NavigationBlock';
 
-function ToDoList({num, status}) {
+function ToDoList({status}) {
 	let list = [];
 	const { t, i18n } = useTranslation();
-	for (let i = 0; i < num; i ++) {
+	for (let i = 0; i < status.length; i ++) {
 		list.push(
 			<li key={`todo${i}`}>
 				<div className={`status ${status[i]}`}>{t(status[i])}</div>
@@ -32,7 +32,7 @@ function ToDoList({num, status}) {
 function HomeScreen() {
 	const avatar = require("../assets/avatar.jpg");
 	const sections = ["Welcome", "Accounts", "ToDo-List"];
-	const todo_status = ["complete", "pend", "complete", "complete", "pend", "pend", "pend", "pend", "pend", "stop", "complete", "stop", "pend", "pend", "stop", "stop", "complete"];
+	const todo_status = ["progress", "pend", "complete", "complete", "pend", "pend", "pend", "complete", "complete", "stop", "complete", "complete", "pend", "pend", "stop", "stop", "complete", "progress"];
 	const { t, i18n } = useTranslation();
 	useEffect(() => {
 		selectNavi('home');
@@ -43,9 +43,7 @@ function HomeScreen() {
 	}, []);
 	return (
 		<div>
-			<div className="twitter-tl float" id="twitter-tl" >
-				<TwitterTimeLine name="remisiki" theme={getTheme} />
-			</div>
+			<TwitterTimeLine name="remisiki" theme={getTheme} />
 
 			<div id="content" className="wrapper doc">
 				<article id={sections[0]} className="float">
@@ -107,7 +105,7 @@ function HomeScreen() {
 						{t("todot")}
 					</p>
 					<ul>
-						<ToDoList num={17} status={todo_status} />
+						<ToDoList status={todo_status} />
 					</ul>
 				</article>
 				<SideBar sections={sections} path="home" />

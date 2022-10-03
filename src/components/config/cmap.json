@@ -54,5 +54,13 @@
 	"Pascal": {
 		"color": "#E3F171",
 		"text": "#323330"
+	},
+	"Makefile": {
+		"color": "#427819",
+		"text": "#eee"
+	},
+	"SystemVerilog": {
+		"color": "#DAE1C2",
+		"text": "#323330"
 	}
 }

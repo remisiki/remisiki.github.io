@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Suspense } from 'react';
-import './components/translation/i18n';
+import { languages, defaultLang } from './components/translation/i18n';
 import {
 	HashRouter,
 	Switch,
@@ -24,7 +24,7 @@ function App() {
 		<>
 			<Title />
 			<header>
-				<NavigationBlock setTheme={setTheme} />
+				<NavigationBlock setTheme={setTheme} languages={languages} defaultLang={defaultLang} />
 			</header>
 			<HashRouter>
 				<ScrollHandler />

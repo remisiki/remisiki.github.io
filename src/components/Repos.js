@@ -40,8 +40,11 @@ function ReposScreen() {
 					<Project name="lan-share" description={t("proj6")} href="https://github.com/remisiki/lan-share" thumb="play" lang="Scala" />
 					<Project name="umjicanvas" description={t("proj2")} href="https://github.com/remisiki/umjicanvas" thumb="umjicanvas" lang="Java" />
 					<Project name="GMM-Demux" description={t("proj3")} href="https://gmm-demux.readthedocs.io/en/latest/" thumb="tsne" lang="Python" />
-					<Project name="ECE4710J" description={t("projji")} href="https://github.com/remisiki/ECE4710J" thumb="svm" lang="Python" />
-					<Project name="VE370" description={t("projji")} href="https://github.com/remisiki/VE370" thumb="cpu" lang="Verilog" />
+					<Project name="ECE4700J" description={t("proj7")} href="https://github.com/remisiki/ECE4700J" thumb="gpu" lang="SystemVerilog" />
+					<Project name="VE475" description={t("proj8")} href="https://github.com/remisiki/VE475" thumb="abe" lang="C" />
+					<Project name="ECE4880J" description={t("proj9")} href="https://github.com/remisiki/ECE4880J" thumb="graph" lang="Python" />
+					<Project name="ECE4710J" description={t("proj10")} href="https://github.com/remisiki/ECE4710J" thumb="svm" lang="Python" />
+					<Project name="VE370" description={t("proj11")} href="https://github.com/remisiki/VE370" thumb="cpu" lang="Verilog" />
 					<Project name="ここまでだ。。。" description="もっとがんばります！" href="" thumb="" lang="C++" />
 				</div>
 				<div className="gap"></div>

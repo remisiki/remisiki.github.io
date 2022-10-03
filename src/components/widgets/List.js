@@ -18,7 +18,7 @@ function List({ data }) {
 	}
 	const lists = data.map((x) => addList(x, sum));
 	return (
-		<div id="langlist">
+		<div id="langlist" className="no-scroll-bar">
 			<ul>
 				{lists}
 			</ul>

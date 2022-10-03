@@ -58,7 +58,7 @@ function Menu() {
 	);
 }
 
-export function NavigationBlock({setTheme}) {
+export function NavigationBlock({setTheme, languages, defaultLang}) {
 	const { t, i18n } = useTranslation();
 	// const logo = require("../../assets/favicon.png");
 	return (
@@ -100,7 +100,7 @@ export function NavigationBlock({setTheme}) {
 				</div>
 			</div>
 			<div className="right-action-container">
-				<div className="title-right" onClick={() => createSettingBar(setTheme, t, i18n)} id="title-right-setting">
+				<div className="title-right" onClick={() => createSettingBar(setTheme, t, i18n, languages, defaultLang)} id="title-right-setting">
 				</div>
 			</div>
 		</div>

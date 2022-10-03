@@ -45,9 +45,7 @@ function GameScreen() {
 	}, []);
 	return (
 		<div>
-			<div className="twitter-tl float" id="twitter-tl" >
-				<TwitterTimeLine name="remisiki_stg" theme={getTheme} />
-			</div>
+			<TwitterTimeLine name="remisiki_stg" theme={getTheme} />
 
 			<div id="content" className="wrapper doc">
 				<article className="float">
@@ -204,7 +202,7 @@ function GameScreen() {
 						</li>
 					</ul>
 					<YouTube
-						videoId={"bm3nN4nFiUQ"}
+						videoId={"bYVrQCh1wQI"}
 						opts={{
 							height: (window.innerWidth <= 800) ? 200 : 450,
 							width: '100%'

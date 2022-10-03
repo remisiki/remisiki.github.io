@@ -87,8 +87,8 @@ function InfoScreen() {
 						<li>
 							<Folder name="C" id="c" />
 							<div className="fold-block" id="c">
-								<p className="brown-text">
-									{t("futuu")}
+								<p className="green-text">
+									{t("gut")}
 								</p>
 								<p>
 									{t("c")}
@@ -136,8 +136,9 @@ function InfoScreen() {
 						</li>
 						<li>
 							<Folder name="Scala" id="scala" />
-							<div className="fold-block" id="scala"> <p className="brown-text">
-									{t("futuu")}
+							<div className="fold-block" id="scala">
+								<p className="green-text">
+									{t("gut")}
 								</p>
 								<p>
 									{t("scala")}
@@ -167,7 +168,7 @@ function InfoScreen() {
 							</div>
 						</li>
 						<li>
-							<Folder name="Verilog" id="verilog" />
+							<Folder name="Verilog/SystemVerilog" id="verilog" />
 							<div className="fold-block" id="verilog">
 								<p className="green-text">
 									{t("gut")}
@@ -207,6 +208,7 @@ function InfoScreen() {
 						<li>{t("ifp2l0")}</li>
 						<li>{t("ifp2l1")}</li>
 						<li>{t("ifp2l2")}</li>
+						<li>{t("ifp2l3")}</li>
 					</ul>
 					<h2 id={sections[2]}>
 						<span>{t("ifs2")}</span>

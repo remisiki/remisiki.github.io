@@ -22,7 +22,7 @@ function createSideOption(content, name, onClick, icon = true) {
 	return option_container;
 }
 
-export function createSettingBar(setTheme, t, i18n) {
+export function createSettingBar(setTheme, t, i18n, languages, defaultLang) {
 	const sidebar_exist = document.getElementById('setting-bar');
 	if (sidebar_exist) {
 		sidebar_exist.classList.remove('slide-in');
@@ -43,7 +43,7 @@ export function createSettingBar(setTheme, t, i18n) {
 	sidebar.id = 'setting-bar';
 
 	sidebar.appendChild(close_btn);
-	sidebar.appendChild(createLanguageSetting(t, i18n));
+	sidebar.appendChild(createLanguageSetting(t, i18n, languages, defaultLang));
 	sidebar.appendChild(createDarkSetting(t, setTheme));
 	document.body.appendChild(sidebar);
 	setTimeout(() => {
@@ -89,37 +89,29 @@ function createDarkSetting(t, setTheme) {
 	return wrapper;
 }
 
-function createLanguageSetting(t, i18n) {
+function createLanguageSetting(t, i18n, languages = ['en', 'ja', 'zh'], defaultLang = 'en') {
 	const lang_map = {
-		'en': 0,
-		'zh': 1,
-		'ja': 2
+		'en': 'English',
+		'zh': '中文',
+		'ja': '日本語'
 	};
-	const lang_mode = lang_map[i18n.language];
 	const wrapper = document.createElement('div');
 	const caption = document.createElement('h1');
 	caption.innerText = t('language');
 	wrapper.appendChild(caption);
 
-	const options = [
-		createSideOption('English', 'en', (e) => {
+	const options = languages.map(language => {
+		const lang_option = createSideOption(lang_map[language], language, (e) => {
 			selectOption(e);
-			i18n.changeLanguage('en');
+			i18n.changeLanguage(language);
 			hideSideBar();
-		}),
-		createSideOption('中文', 'zh', (e) => {
-			selectOption(e);
-			i18n.changeLanguage('zh');
-			hideSideBar();
-		}),
-		createSideOption('日本語', 'ja', (e) => {
-			selectOption(e);
-			i18n.changeLanguage('ja');
-			hideSideBar();
-		}),
-	];
-
-	options[lang_mode].classList.add('option-selected');
+		});
+		const current_lang = i18n.language.split("-")[0];
+		if ((language === current_lang) || (languages.indexOf(current_lang) === -1 && language === defaultLang)) {
+			lang_option.classList.add("option-selected");
+		}
+		return lang_option;
+	});
 	for (const option of options) {
 		wrapper.appendChild(option);
 	}

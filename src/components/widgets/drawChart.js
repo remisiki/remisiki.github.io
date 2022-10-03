@@ -70,7 +70,7 @@ const drawChart = (element, data) => {
 		.attr("text-anchor", "middle")
 		.text((d) => {
 			const index = data.findIndex(({key}) => key === d.data.key);
-			if (index <= 3) {
+			if (index <= 5) {
 				return `${d.data.key}`;
 			}
 			else if (index === data.length - 1) {
@@ -82,7 +82,7 @@ const drawChart = (element, data) => {
 		.attr("transform", (d) => {
 			let [x, y] = arcGenerator.centroid(d);
 			x *= 1.6;
-			y *= 1.3;
+			y *= 1.4;
 			return `translate(${x}, ${y})`;
 		})
 		.style("font-size", "0")
